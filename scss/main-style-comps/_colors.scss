@@ -1,0 +1,21 @@
+/* the maincolors for the most titles and headings and other stuff in the website */
+$maincolor1: #2c3e50;
+$maincolor2: #e74c3c;
+$maincolor3: #c0c0c0;
+$maincolor4: #E4E4E4;
+$maincolor5: #FFFFFF;
+$maincolor6: #111111;
+/* the sub colors for main colors number 1 and 2 */
+$subcolor1: #566573;
+$subcolor2: #ea6e61;
+
+/* these colors which is used in common for paragraphes color */
+$graycolor1: #f6f6f6;
+$graycolor2: #8f8f8f;
+$graycolor3: #adadad;
+
+/* the overlay colors means: colors with opacity so overlaycolor1 mean the maincolor1 with opacity */
+$overlaycolorshade: rgba(0,0,0,0.3);
+$overlaycolorblack: rgba(0,0,0,0.6);
+$overlaycolor1: rgba(44,62,80,0.8);
+$overlaycolor2: rgba(231,76,60,0.8);

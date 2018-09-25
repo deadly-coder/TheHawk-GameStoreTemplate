@@ -1,0 +1,763 @@
+/* start header */
+.home-header{
+	padding-top: 10px;
+	/* login,register, search input style */
+	.user-spans{
+		padding: 0;
+		/* login and register links style */
+		.user-login{
+			float: left;
+			text-transform: uppercase;
+			font-size: $fontsize5;
+            @include responsive(medium-screen){font-size: $fontsize6;}
+            @include responsive(tablet-screen){font-size: $fontsize6;}
+            @include responsive(big-phone-screen){
+                float: none;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+            .user-in{
+                display: inline-block;
+                cursor: pointer;
+                margin-right: 3px;
+                ul{
+                    box-shadow: none;
+                    border-radius: 0;
+                    min-width: 170px;
+                    padding-bottom: 20px;
+                    li{
+                        padding: 0 20px;
+                        a{
+                            display: block;
+                            font-size: $fontsize7;
+                            padding: 6px 0;
+                            border-bottom: 1px solid $maincolor4;
+                            transition: all 0.3s ease-in-out;
+                            &:hover{
+                                background: none;
+                                border-bottom-color: $maincolor2;
+                            }
+                        }
+                        &.dropdown-header{padding-top: 20px;}
+                    }
+                }
+            }
+            a{
+                display: inline-block;
+                padding: 3px 0;
+                text-decoration: none;
+                color: $maincolor1;
+                outline: 0;
+                transition: all 0.3s ease-in-out;
+                @include responsive(big-phone-screen){font-size: $fontsize6;}
+                &:hover{color: $maincolor2;}
+                img{
+                    width: 40px;
+                    border-radius: 50%;
+                    margin-right: 5px;
+                    image-rendering: -webkit-optimize-contrast;
+                }                
+            }                
+            
+		}/* end user-login */
+		/* search input style */
+		form.search{
+			font-size: $fontsize7;
+			float: right;
+            width: 275px;
+            @include responsive(big-phone-screen){
+                float: none;
+                text-align: center;
+                margin: 0 auto;
+            }
+			.form-group{
+                position: relative;
+                margin: 0;
+				.myinput{
+                    width: 100%;
+					padding: 5px 10px 5px 36px;
+                    font-size: $fontsize6;
+					border: 0;
+					color: $maincolor2;
+					outline: 0;
+                    letter-spacing: 0.4px;
+					line-height: normal;
+					transition: all 0.2s ease-in-out;
+				}
+                span{
+                    position: absolute;
+                    width: 34px;
+                    height: 34px;
+                    line-height: 34px;
+                    top: 0;
+                    left: 0;
+                    text-align: center;
+                    color: $maincolor1;
+                }
+                @include placeholderColor($maincolor1);
+			}
+		}/* end search */
+        /* log in and register modal form */        
+        #myModal{
+            padding-right: 0 !important;
+            .modal-dialog{
+                width: 385px;
+                margin: 45px auto;
+                -webkit-box-shadow: 0px 15px 35px -4px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 15px 35px -4px rgba(0,0,0,0.75);
+                box-shadow: 0px 15px 35px -4px rgba(0,0,0,0.75);                
+                @include responsive(medium-phone-screen){width: 340px;}
+                @include responsive(small-phone-screen){width: 285px;}
+                .modal-content{
+                    box-shadow: none;
+                    border-radius: 0;
+                    border: 0;
+                    .content{
+                        position: relative;
+                        padding: 0 15px 30px 15px;
+                        height: 100%;
+                        background-image: url('../images/login-form-background.jpg');
+                        background-size: cover;
+                        image-rendering: -webkit-optimize-contrast;
+                        .overlay{@extend %overlayBlue;}
+                        .form-nav{
+                            position: relative;
+                            .nav-tabs{
+                                border: 0;
+                                padding: 10px 0 0 0;
+                                margin-bottom: 25px;
+                                border-bottom: 1px solid $maincolor4;
+                                li{
+                                    a{
+                                        font-size: $fontsize6;
+                                        font-weight: 500;
+                                        text-transform: uppercase;
+                                        border: 0;
+                                        border-radius: 0;
+                                        padding: 10px 0 20px 0;
+                                        color: $maincolor4;
+                                        border-bottom: 1px solid transparent;
+                                        transition: all 0.3s ease-in-out;
+                                        &:hover{
+                                            background: none;
+                                            border: 0;
+                                            color: $maincolor2;
+                                        }
+                                    }
+                                    &.active{
+                                        a{
+                                            background: none;
+                                            color: $maincolor2;
+                                            border: 0;
+                                            border-bottom: 1px solid $maincolor2;
+                                            font-weight: 600;
+                                        }
+                                    }
+                                    &:first-of-type{margin-right: 15px;}
+                                }
+                            }/* end nav-tabs */
+                        }/* end form-nav */
+                        .tab-content{
+                            position: relative;
+                            .form{
+                                .divider{
+                                    position: relative;
+                                    text-align: center;
+                                    margin: 30px 0;
+                                    z-index: 1;
+                                    span{
+                                        font-size: $fontsize6;
+                                        color: $maincolor4;
+                                        font-weight: normal;
+                                        background-color: $maincolor2;
+                                        display: inline-block;
+                                        padding: 2px 15px;
+                                        text-transform: capitalize;
+                                    }
+                                    span::before{
+                                        content: "";
+                                        width: 100%;
+                                        height: 1px;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 0;
+                                        background-color: $maincolor2;   
+                                        z-index: -1;
+                                    }
+                                }
+                                .login-with{margin-bottom: 40px;}
+                                .register-with{@extend .login-with}
+                                button{
+                                    display: block;
+                                    text-transform: capitalize;
+                                    width: 100%;
+                                    font-size: 18px;
+                                    border: 0;
+                                    padding: 6px 0;
+                                    margin: 5px 0;
+                                    color: $maincolor5;
+                                    outline: 0;
+                                    transition: all 0.3s ease-in-out;
+                                    i{margin-right: 3px;}
+                                    &.cwf{background-color: #3b5998;}
+                                    &.cws{background-color: #616161;}
+                                    &.cwt{background-color: #6441a5;}
+                                    &.submit{
+                                        background-color: $overlaycolorshade;
+                                        &:hover{color: $maincolor2;}
+                                    }
+                                }
+                                .form-group{
+                                    position: relative;
+                                    @include placeholderColor($maincolor3);
+                                    .myinput{
+                                        position: relative;
+                                        display: block;
+                                        width: 100%;
+                                        padding: 6px 31px 6px 10px;
+                                        border: 0; 
+                                        outline: 0;
+                                        color: $maincolor1;
+                                        letter-spacing: 0.7px;
+                                    }
+                                    span{
+                                        position: absolute;
+                                        top: 0;
+                                        right: 0;
+                                        width: 37px;
+                                        height: 37px;
+                                        line-height: 37px;
+                                        text-align: center;
+                                        font-size: $fontsize6;
+                                        color: $maincolor1;
+                                        background-color: $maincolor4;
+                                        @include responsive(big-phone-screen){
+                                            width: 34px;
+                                            height: 34px;
+                                            line-height: 34px;                                            
+                                        }
+                                    }
+                                }/* end form-group */
+                                .RM{
+                                    @extend %checkbox-style;
+                                    label{
+                                        input[type=checkbox]{
+                                            border-color: $maincolor4;
+                                            background: #E4E4E4;
+                                        }
+                                        small{color: $maincolor4;font-size: $fontsize6;}
+                                    }
+                                }
+                                .TS{@extend .RM;}
+                            }/* end form */
+
+                        }/* end tab-content */
+                    }/* end content */
+                    .close{
+                        width: 100%;
+                        background-color: $maincolor6;
+                        border: 0;
+                        opacity: 1;
+                        text-shadow: none;
+                        text-transform: uppercase;
+                        padding: 6px 0;
+                        letter-spacing: 0.5px;
+                        font-size: 18px;
+                        float: none;
+                        outline: 0;
+                        color: $maincolor5;
+                        transition: all 0.3s ease-in-out;
+                        &:hover{color: $maincolor2;}
+                    }
+                }/* end modal-content */
+            }/* end modal-dialog */
+        }/* end #myModal */        
+	}/* end user-spans */
+    
+	/* logo style */
+	.logo{
+		text-align: center;
+        @include responsive(small-phone-screen){margin-top: 25px;}
+		h3{
+			font-family: $fontstyle2;
+			text-transform: uppercase;
+			color: $maincolor1;
+			display: inline-block;
+			span{color: $maincolor2;font-weight: 600;}
+		}
+		img{
+            display: inline-block;
+            @include responsive(big-phone-screen){width: 97px;}
+            @include responsive(medium-phone-screen){width: 80px;}
+            @include responsive(small-phone-screen){width: 88px;}
+        }
+		.xline{
+            color: $maincolor2;
+            font-size: 60px;
+            @include responsive(medium-phone-screen){display: none;}
+            @include responsive(small-phone-screen){display: none;}
+        }
+	}	
+	/* navbar style */
+	.header-nav{
+		list-style: none;
+		text-align: center;
+		margin-top: 25px;
+		margin-bottom: 0;
+		padding: 15px 0 15px 0;
+		border-top: 1px solid $maincolor2;
+		border-bottom: 1px solid $maincolor2;
+        @include responsive(tablet-screen){
+            border-bottom: 0;
+            height: auto;
+            padding: 8px 0 8px 0;
+        }
+        @include responsive(big-phone-screen){
+            border-bottom: 0;
+            height: auto;
+            padding: 8px 0 8px 0;
+        }        
+		li{
+			display: inline-block;
+			font-size: $fontsize5;
+			text-transform: uppercase;
+			margin: 0 29px;
+            font-weight: 400;
+            @include responsive(medium-screen){
+                font-size: $fontsize6;
+                margin: 0 20px;
+            }            
+            @include responsive(tablet-screen){
+                display: none;
+                width: 100%;
+                height: 40px;
+                border: 1px solid $maincolor2;
+                float: none;
+                margin: auto;
+                margin-bottom: 8px;
+                line-height: 40px;
+                font-size: $fontsize6;
+            }
+            @include responsive(big-phone-screen){
+                display: none;
+                width: 100%;
+                height: 40px;
+                border: 1px solid $maincolor2;
+                float: none;
+                margin: auto;
+                margin-bottom: 8px;
+                line-height: 40px;
+                font-size: $fontsize7;
+            }            
+			a{
+				text-decoration: none;
+				color: $maincolor1;
+				transition: all 0.3s ease-in-out;
+				border-bottom: 1px solid transparent;
+				&:hover{color: $maincolor2;border-bottom-color: $maincolor2;}
+                @include responsive(tablet-screen){color: $maincolor2;}
+                @include responsive(big-phone-screen){color: $maincolor2;}                
+			}
+		}/* end li */
+
+        .dropdown{
+            .dropdown-menu{ 
+                padding: 8px 0;
+                box-shadow: none;
+                border-radius: 0;
+                @include responsive(tablet-screen){
+                    border-color: $maincolor2;
+                    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+                }
+                @include responsive(big-phone-screen){
+                    border-color: $maincolor2;
+                    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+                }                
+                li{
+                    display: block;
+                    letter-spacing: 0.8px;
+                    font-size: $fontsize6;
+                    margin: 0 15px;
+                    @include responsive(tablet-screen){
+                        background-color: #fff;
+                        display: block !important;
+                        margin-left: 0;
+                        margin-bottom: 4px;
+                        border: 0;
+                    }                    
+                    @include responsive(big-phone-screen){
+                        background-color: #fff;
+                        display: block !important;
+                        margin-left: 0;
+                        margin-bottom: 4px;
+                        border: 0;
+                        font-size: $fontsize7;
+                    }
+                    a{
+                        display: block;
+                        color: $maincolor1;
+                        padding: 8px 0;
+                        border: 0;
+                        border-bottom: 1px solid $maincolor4;
+                        &:hover{
+                            background: none;
+                            border-bottom-color: $maincolor2;
+                        }
+                        @include responsive(tablet-screen){
+                            padding: 8px;
+                            border-bottom: 1px solid #e74c3c;
+                            margin: 0 22px;
+                        }
+                        @include responsive(big-phone-screen){
+                            padding: 8px;
+                            border-bottom: 1px solid #e74c3c;
+                            margin: 0 22px;
+                        }
+                    }
+                }/* end li */
+            }/* end dropdown-menu */
+        }/* end dropdown */ 
+		.active{
+			a{color: $maincolor2;border-bottom-color: $maincolor2;}
+            @include responsive(tablet-screen){background-color: $maincolor1;border-color: $maincolor1;}
+            @include responsive(big-phone-screen){background-color: $maincolor1;border-color: $maincolor1;}            
+            button{color: $maincolor2;border-bottom-color: $maincolor2;}
+		}/* end active */        
+	}/* end header-nav */
+    
+    /* navbar menu button style */
+    a#pull{
+        display: none;
+        @include responsive(tablet-screen){
+            display: block;
+            text-decoration: none;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: $fontsize6;
+            text-transform: uppercase;
+            color: $maincolor2;
+        }
+        @include responsive(big-phone-screen){
+            display: block;
+            text-decoration: none;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: $fontsize6;
+            text-transform: uppercase;
+            color: $maincolor2;
+        }        
+    }
+}
+/* end header */
+
+/* start checkout steps */
+.checkout-steps{
+    @extend %global-sections-css2;
+    .step{
+        position: relative;
+        float: left;
+        width: 33.33333333%;
+        text-align: center;
+        border-bottom: 1px solid transparent;
+        padding: 10px 0;
+        cursor: default;
+        h3{color: $maincolor3;}
+        h5{
+            color: $graycolor3;
+            text-transform: uppercase;
+            @include responsive(big-phone-screen){display: none;}
+        }
+    }
+    .step.active{
+        h3{color: $maincolor2;}
+        h5{color: $maincolor1;}
+    }
+    .step:first-child::after,
+    .step:nth-child(2)::after{
+        content: '\f054';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        position: absolute;
+        right: 0;
+        font-size: $fontsize4;
+        bottom: 44px;
+        @include responsive(big-phone-screen){bottom: 21px;}
+    }
+}
+/* end checkout steps */
+
+/* start breadcrumbs */
+.breadcrumbs{
+    @extend %global-sections-css3;
+    .mybreadcrumb{
+        list-style: none;
+        padding: 0;
+        background-color: $graycolor1;
+        margin: 0;
+        li{
+            position: relative;
+            display: inline-block;
+            font-size: $fontsize5;
+            padding: 5px 25px;
+            background-color: $maincolor1;
+            text-transform: uppercase;
+            @include responsive(medium-screen){font-size: $fontsize6;}
+            @include responsive(big-phone-screen){
+                font-size: $fontsize7;
+                width: 100%;
+                text-align: center;
+                padding: 0;
+            }
+            a{
+                position: relative;
+                display: block;
+                color: $maincolor4;
+                text-decoration: none;
+                transition: all 0.3s ease-in-out;
+                &:hover{color: $maincolor2;}
+                @include responsive(big-phone-screen){display: block;padding: 10px;}
+
+            }
+            &:last-of-type{
+                &::before{
+                    content: "";
+                    position: absolute;
+                    left: -2px;
+                    top: 0;
+                    width: 0;
+                    height: 0;
+                    border-top: 19px solid transparent;
+                    border-left: 25px solid $maincolor1;
+                    border-bottom: 19px solid transparent;
+                    @include responsive(medium-screen){
+                        border-top: 17px solid transparent;
+                        border-left: 25px solid $maincolor1;
+                        border-bottom: 17px solid transparent;
+                    }
+                    @include responsive(big-phone-screen){display: none;}                        
+                }
+            }            
+        }/* end li */
+        .active{
+            background: transparent;
+            padding-left: 30px;
+            @include responsive(big-phone-screen){padding: 10px;}
+        }
+    }/* end mybreadcrumb */    
+}
+/* end breadcrumb */
+
+/* start filter-bar */
+.filter-bar{
+    position: relative;
+    @extend %global-sections-css3;
+    .container{
+        position: relative;
+        .filter-content{
+            position: relative;
+            border-bottom: 1px solid $maincolor4;
+            .title{
+                text-transform: uppercase;
+                color: $maincolor1;
+                margin: 10px 0 25px 0;
+                span{
+                    color: $maincolor2;
+                    border-bottom: 1px solid $maincolor2;
+                    i{padding-left: 3px;}
+                }
+            }
+            .dropdown{
+                position: relative;
+                display: inline-block;
+                margin: 0 15px;
+                @include responsive(big-phone-screen){
+                    float: left;
+                    margin: 10px 15px 0 0;
+                }
+                button{
+                    background: none;
+                    border: 0;
+                    padding-top: 5px;
+                    padding-bottom: 30px;
+                    border-bottom: 1px solid transparent;
+                    font-size: $fontsize5;
+                    color: $maincolor1;
+                    transition: all 0.3s ease-in-out;
+                    text-transform: uppercase;
+                    &:hover{border-bottom-color: $maincolor2;}
+                    @include responsive(medium-screen){font-size: $fontsize6;}
+                    @include responsive(tablet-screen){font-size: $fontsize6;}
+                    @include responsive(big-phone-screen){
+                        padding-bottom: 10px;
+                        padding-left: 0;
+                        font-size: $fontsize7;
+                    }
+                }
+                .dropdown-menu{
+                    border-top: 1px solid $maincolor2;
+                    border-radius: 0;
+                    box-shadow: none;
+                    li{
+                        a{
+                            font-size: $fontsize6;
+                            text-transform: capitalize;
+                            color: $maincolor1;
+                            transition: all 0.3s ease-in-out;
+                            &:hover{
+                                color: $maincolor4;
+                                background-color: $subcolor2;
+                            }
+                            @include responsive(big-phone-screen){font-size: $fontsize7;}
+                        }
+                    }/* end li */
+                }/* end dropdown-menu */
+            }/* end dropdown */
+            form{
+                position: relative;
+                display: inline-block;
+                margin-right: 15px;
+                width: 40%;
+                @include responsive(big-phone-screen){
+                    float: none;
+                    width: 100%;
+                }
+                .filter-search-input{
+                    position: relative;
+                    i{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 35px;
+                        height: 41px;
+                        line-height: 41px;
+                        font-size: $fontsize7;
+                        text-align: center;
+                        color: $graycolor2;
+                        @include responsive(big-phone-screen){
+                            height: 36px;
+                            line-height: 36px;
+                        }
+                    }
+                    input{
+                        width: 100%;
+                        padding: 6px 30px 6px 12px;
+                        font-size: $fontsize6;
+                        border: 1px solid $maincolor1;
+                        color: $maincolor1;
+                        outline: 0;
+                        transition: all 0.3s ease-in-out;
+                        &:focus{border-color: $maincolor2;}
+                        @include responsive(big-phone-screen){font-size: $fontsize7;}
+
+                    }                
+                }/* filter-search-input */
+            }/* end form */ 
+            .filter-search-btn{
+                float: right;
+                position: relative;
+                display: inline-block;
+                @include responsive(big-phone-screen){
+                    float: none;
+                    margin-top: 10px;
+                }
+                button{
+                    background-color: $maincolor2;
+                    color: #fff;
+                    border: 0;
+                    font-size: $fontsize6;
+                    font-weight: 300;
+                    padding: 5px 25px;
+                    text-transform: uppercase;
+                    transition: all 0.3s ease-in-out;
+                    outline: 0;
+                    &:hover{background-color: $maincolor1;}
+                    @include responsive(big-phone-screen){font-size: $fontsize7;}
+                }
+            }/* end filter-search-btn */            
+        }/* end filter-content */
+    }/* end container */
+}/* end filter-bar */
+
+/* start gamepage nav */
+.gamepage-nav{
+    padding: 20px 0;
+    ul{
+        li{
+            display: inline-block;
+            margin: 0 15px 0 0;
+            font-size: $fontsize6;
+            text-transform: uppercase;
+            letter-spacing: 0.2px;
+            @include responsive(tablet-screen){margin-bottom: 15px;}
+            @include responsive(big-phone-screen){
+                display: block;
+                font-size: $fontsize7;
+                margin-bottom: 12px;
+            }
+            a{
+                display: block;
+                text-decoration: none;
+                color: $maincolor1;
+                border: 1px solid $maincolor1;
+                padding: 3px 10px;
+                transition: all 0.3s ease-in-out;
+                &:hover{
+                    color: $maincolor2;
+                    border-color: $maincolor2;
+                }
+            }
+        }
+        .active{
+            a{
+                color: $maincolor2;
+                border-color: $maincolor2;
+            }
+        }
+    }/* end ul */
+}
+/* end gamepage nav */
+
+/* start page navigation */
+.pn{
+    @extend %global-sections-css3;
+    /* heading */
+    h4{
+        text-transform: capitalize;
+        color: $maincolor2;
+    }
+    /* pagination */
+    .pagination{
+        li{
+            display: inline-block;
+            a{
+                border-radius: 0;
+                font-size: $fontsize6;
+                color: $maincolor2;
+                border-color: $maincolor2;
+                padding: 6px 17px;
+                margin: 0 2px;
+                transition: all 0.2s ease-in-out;
+                @include responsive(small-phone-screen){
+                    font-size: $fontsize8;
+                    padding: 6px 12px;
+                }
+                &:hover{
+                    background-color: $maincolor2;
+                    color: $maincolor4;
+                }
+                &:focus{
+                    background-color: $maincolor2;
+                    color: $maincolor4;                    
+                }
+            }
+            .active{
+                background-color: $maincolor2;
+                color: $maincolor4;
+                cursor: not-allowed;
+            }
+        }/* end li */
+    }/* end pagination */
+}
+/* end page navigation */

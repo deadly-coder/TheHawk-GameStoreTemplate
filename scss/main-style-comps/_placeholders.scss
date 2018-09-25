@@ -1,0 +1,249 @@
+%overlayBlack{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: $overlaycolorshade;
+}
+
+%overlayMoreBlack{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: $overlaycolorblack;    
+}
+
+%overlayBlue{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: $overlaycolor1;
+}
+%halfOverlayBlue{
+    @extend %overlayBlue;
+    width: 50%;
+}
+
+%overlayBlueFade{
+    @extend %overlayBlue;
+    background: linear-gradient(to bottom, transparent 10%, rgba(44,62,80,0.8));
+}
+
+%halfOverlayBlue-Right{
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	background-color: $overlaycolor1;
+}
+%overlayOrange{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: $overlaycolor2;
+}
+
+%halfOverlayOrange{
+    @extend %overlayOrange;
+    width: 50%;
+}
+
+%halfOverlayOrange-Right{
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	background-color: $overlaycolor2;    
+}
+
+%overlayOrangeFade{
+    @extend %overlayOrange;
+    background: linear-gradient(to bottom, transparent 10%, rgba(231,76,60,0.8));
+}
+
+%overlayAwesome{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: linear-gradient(to right, rgba(44,62,80,0.8) 60%, rgba(231,76,60,0.8));   
+}
+%overlayAwesome-left{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: linear-gradient(to left, rgba(44,62,80,0.8) 60%, rgba(231,76,60,0.8));   
+}
+
+%headingStyle1{
+    margin-bottom: 20px;
+    border-bottom: 1px solid $maincolor2;
+    h1, h3, h4, h5, h6{
+        text-transform: uppercase;
+        color: $maincolor1;
+        margin-top: 10px;
+        span{color: $maincolor2;}
+    }
+}
+
+%headingStyle2{
+    border-left: 2px solid $maincolor1;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    .sub{
+        display: inline-block;
+        font-size: $fontsize7;
+        background-color: $maincolor2;
+        padding: 2px 5px;
+        color: $maincolor5;
+        text-transform: capitalize;
+        font-weight: 300;
+        margin-bottom: 2px;
+        @include responsive(big-phone-screen){font-size: $fontsize8;}
+    }  
+    .tag{
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        &:hover{background-color: $maincolor1;}
+    }
+    h1,h2,h3,h4,h5,h6{
+        text-transform: uppercase;
+        color: $maincolor1;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        span{color: $maincolor2;}
+    } 
+}
+
+%headingStyle2-v2{
+    border-left: 2px solid $maincolor2;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    .sub{
+        display: inline-block;
+        font-size: $fontsize7;
+        background-color: $maincolor2;
+        padding: 2px 5px;
+        color: $maincolor5;
+        text-transform: capitalize;
+        font-weight: 300;
+        margin-bottom: 2px;
+        @include responsive(big-phone-screen){font-size: $fontsize8;}
+    }  
+    .tag{
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        &:hover{background-color: $maincolor1;}
+    }
+    h1,h2,h3,h4,h5,h6{
+        text-transform: uppercase;
+        color: $maincolor5;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        span{color: $maincolor2;}
+    } 
+}
+
+%normal-image-style{
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    image-rendering: -webkit-optimize-contrast;
+}
+%global-sections-css{
+    position: relative;
+    padding: 55px 0;
+}
+
+%global-sections-css2{
+    position: relative;
+    padding: 25px 0;
+}
+%global-sections-css3{
+    position: relative;
+    padding: 10px 0;
+}
+
+%center-the-items-inside-me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%circle{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 2;
+    @include responsive(medium-phone-screen){width: 40px;height: 40px;}
+}
+
+%circle2{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 3;
+    @include responsive(tablet-screen){
+        width: 80px;
+        height: 80px;
+    }
+    @include responsive(big-phone-screen){
+        width: 70px;
+        height: 70px;
+    }        
+}
+/* checkbox style it must contain a label inside that lable the checkbox input and the small tag 
+the small tag it's what contains the paragraph next to the check box */
+%checkbox-style{
+    label{
+        font-size: $fontsize5;
+        text-transform: capitalize;
+        input[type=checkbox]{
+            position: relative;
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 1px solid $maincolor1;
+            padding: 0;
+            margin: 0 3px 0 0;
+        }
+        input[type=checkbox]:focus{outline: 0;}
+        input[type=checkbox]:checked::after{
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            color: $maincolor2;
+            font-weight: 900;
+            font-size: $fontsize9;
+            position: absolute;
+            top: 3px;
+            left: 3px
+        }
+        small{
+            color: $maincolor1;
+            vertical-align: text-top;
+            font-weight: 200;
+            letter-spacing: 0.7px;
+            @include responsive(big-phone-screen){font-size: $fontsize7;}
+            a{color: $maincolor2;font-weight: bold;}
+        }
+    }/* end label */                       
+}

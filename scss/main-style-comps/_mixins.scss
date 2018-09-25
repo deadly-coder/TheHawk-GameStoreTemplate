@@ -1,0 +1,68 @@
+/* start mixins here */
+@mixin placeholderColor($placeholder-color){
+    ::-webkit-input-placeholder {color: $placeholder-color;}
+    ::-moz-placeholder {color: $placeholder-color;}
+    :-ms-input-placeholder {color: $placeholder-color;}
+    placeholder {color: $placeholder-color;}     
+}
+
+@mixin responsive($media){
+    @if $media == medium-screen {
+        @media (min-width: 992px) and (max-width: 1199px){@content;}
+    }
+    @if $media == tablet-screen {
+        @media (min-width: 768px) and (max-width: 991px) {@content;}
+    }
+    @if $media == big-phone-screen {
+        @media (max-width: 425px) {@content;}
+    }
+    @if $media == medium-phone-screen {
+        @media (min-width: 320px) and (max-width: 375px) {@content;}
+    }
+    @if $media == small-phone-screen {
+        @media (max-width: 320px) {@content;}
+    }
+}
+
+@mixin heading-with-background($image, $padding){
+    position: relative;
+    text-align: center;
+    padding: $padding;
+    padding-left: 0;
+    padding-right: 0;    
+    margin-bottom: 15px;
+    background-image: url('../images/#{$image}.jpg');
+    background-position: center;
+    background-size: cover;
+    image-rendering: -webkit-optimize-contrast;
+    @extend %center-the-items-inside-me; 
+    @include responsive(medium-phone-screen){padding: 40px 0;}
+    .overlay{@extend %overlayBlue;}
+    h1, h2, h3, h4, h5, h6{
+        position: relative;
+        color: $maincolor4;
+        text-transform: uppercase;
+        margin: 10px 0;
+        pointer-events: none;
+        span{
+            font-weight: 500;
+            color: $maincolor2;
+            border-bottom: 1px solid $maincolor2;
+        }
+    }
+    p{
+        position: relative;
+        text-transform: capitalize;
+        color: $maincolor3;
+    }
+    .inner{padding: 0 30px;}
+    &::after{
+        @extend %circle;
+        right: -29px;
+    }
+    &::before{
+        @extend %circle;
+        left: -29px;
+    }     
+}
+/* end mixins here */

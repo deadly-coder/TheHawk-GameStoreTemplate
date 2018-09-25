@@ -1,0 +1,75 @@
+/* font type */
+@import url('https://fonts.googleapis.com/css?family=BenchNine');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+$fontstyle1: 'BenchNine', sans-serif;
+$fontstyle2: 'Amatic SC', cursive;
+
+/* font sizes */
+$fontsize1: 40px;
+$fontsize2: 30px;
+$fontsize3: 25px;
+$fontsize4: 22px;
+$fontsize5: 20px;
+$fontsize6: 18px;
+$fontsize7: 16px;
+$fontsize8: 14px;
+$fontsize9: 12px;
+$fontsize10: 10px;
+
+/* headings font sizes */
+h1,h2,h3,h4,h5,h6{letter-spacing: 0.4px;line-height: 1.5;}
+h1{
+    font-size: 50px;
+    @include responsive(medium-screen){font-size: 45px;}
+    @include responsive(big-phone-screen){font-size: 43px;}
+}
+h2{ 
+    font-size: 40px;
+    @include responsive(medium-screen){font-size: 35px;} 
+    @include responsive(big-phone-screen){font-size: 32px;}
+}
+h3{ 
+    font-size: 35px;
+    @include responsive(medium-screen){font-size: 30px;} 
+    @include responsive(big-phone-screen){font-size: 28px;}
+}
+h4{ 
+    font-size: 27px;
+    @include responsive(medium-screen){font-size: 25px;}  
+    @include responsive(big-phone-screen){font-size: 24px}
+    @include responsive(medium-phone-screen){font-size: 22px;}
+}
+h5{ 
+    font-size: 23.5px;
+    @include responsive(medium-screen){font-size: 20px;}  
+    @include responsive(big-phone-screen){font-size: 18px;}
+}
+h6{ 
+    font-size: 21px;
+    @include responsive(medium-screen){font-size: 19px;}  
+    @include responsive(big-phone-screen){font-size: 17px;}
+}
+
+/* parapgraph font size */
+p{
+    letter-spacing: 0.7px;
+    font-size: $fontsize5;
+    @include responsive(medium-screen) {font-size: $fontsize6;}
+    @include responsive(tablet-screen){font-size: $fontsize6;}
+    @include responsive(big-phone-screen){font-size: $fontsize7;}
+}
+button{outline: 0;letter-spacing: 0.7px;}
+span{letter-spacing: 0.7px;}
+.myinput{
+    letter-spacing: 0.7px;
+    font-size: $fontsize6;
+    outline: 0;
+    @include responsive(big-phone-screen){font-size: $fontsize7;}
+}
+.mybtn{
+    letter-spacing: 0.7px;
+    font-size: $fontsize5;
+    @include responsive(medium-screen){font-size: $fontsize6;}
+    @include responsive(tablet-screen){font-size: $fontsize6;}
+    @include responsive(big-phone-screen){font-size: $fontsize7;}
+}
