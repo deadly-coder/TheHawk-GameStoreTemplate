@@ -1,0 +1,396 @@
+@import 'main-style';
+
+.blog{
+    position: relative;
+    /* blog list */
+    .post{
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        .image{
+            position: relative;
+            margin-bottom: 30px;
+            @include responsive(medium-screen){margin-bottom: 15px;}
+            @include responsive(big-phone-screen){margin-bottom: 10px;}            
+            .overlay{@extend %overlayBlueFade;}
+            .TD{
+                position: absolute;
+                bottom: 21%;
+                padding-left: 40px;
+                @include responsive(medium-screen){bottom: 23%;}
+                @include responsive(big-phone-screen){
+                    padding: 0 10px;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                h3{
+                    text-transform: capitalize;
+                    transition: all 0.3s ease-in-out;
+                    @include responsive(medium-phone-screen){margin-bottom: 8px;}
+                    a{
+                        display: block;
+                        color: $maincolor5;
+                        padding: 10px 5px 10px 10px;
+                        text-decoration: none;
+                        border-left: 2px solid $maincolor2;
+                        background-color: $overlaycolorblack;
+                        transition: all 0.2s ease-in-out;
+                        &:hover{color: $maincolor2;}
+                    }
+                }
+                span{
+                    color: $maincolor4;
+                    text-transform: capitalize;
+                    font-size: $fontsize7;
+                    @include responsive(big-phone-screen){display: none;}
+                }
+            }/* end TD */
+            .TC{
+                position: absolute;
+                bottom: 10%;
+                width: 100%;
+                @include responsive(big-phone-screen){display: none;}
+                ul.T{
+                    list-style: none;
+                    float: left;
+                    margin: 0;
+                    padding-left: 40px;
+                    li{
+                        float: left;
+                        a{
+                            display: block;
+                            text-decoration: none;
+                            padding: 5px 10px;
+                            background-color: $maincolor2;
+                            margin-right: 4px;
+                            color: $maincolor5;
+                            text-transform: uppercase;
+                            font-size: $fontsize7; 
+                            transition: all 0.3s ease-in-out;
+                            &:hover{background-color: $subcolor2;}
+                        }
+                    }
+                }
+                .C{
+                    float: right;
+                    margin-right: 40px;
+                    span{
+                        font-size: $fontsize7;
+                        a{
+                            text-decoration: none;
+                            color: $maincolor4;
+                            transition: all 0.3s ease-in-out;
+                            &:hover{
+                                color: $maincolor2;
+                            }
+                        }
+                    }
+                }
+            }/* TC */
+            img{@extend %normal-image-style;}
+        }/* end image */
+        .info{
+            position: relative;
+            .TDC{
+                display: none;
+                @include responsive(big-phone-screen){display: block;}
+                .D{
+                    margin-bottom: 5px;
+                    span{
+                        color: $maincolor2;
+                        text-transform: capitalize;
+                        font-size: $fontsize7;
+                        @include responsive(big-phone-screen){font-size: $fontsize8;}
+                    }
+                }
+                .TC{
+                    margin-bottom: 15px;
+                    ul.T{
+                        li{
+                            display: inline-block;
+                            margin: 0 4px 5px 0;
+                            a{
+                                display: block;
+                                padding: 5px 10px;
+                                background-color: $maincolor2;
+                                color: $maincolor5;
+                                text-transform: uppercase;
+                                font-size: $fontsize7;
+                                transition: all 0.3s ease-in-out;
+                                &:hover{background-color: $subcolor2;}
+                                @include responsive(big-phone-screen){font-size: $fontsize8;}
+                            }
+
+                        }
+                    }
+                    .C{
+                        span{
+                            font-size: $fontsize7;
+                            a{
+                                text-decoration: none;
+                                color: $maincolor1;
+                                transition: all 0.3s ease-in-out;
+                                &:hover{color: $maincolor2;}
+                                @include responsive(big-phone-screen){font-size: $fontsize8;}
+                            }
+                        }
+                    }              
+                }/* end TC */
+            }/* end TDC */
+            position: relative;
+            p{
+                color: $graycolor2;
+                margin-bottom: 20px;
+            }
+            .author{
+                text-transform: uppercase;
+                font-size: $fontsize7;
+                letter-spacing: 0.1px;
+                @include responsive(big-phone-screen){font-size: $fontsize8;}
+                a{
+                    display: inline-block;
+                    color: $maincolor4;     
+                    background-color: $maincolor2;
+                    padding: 10px 12px;
+                }
+            }
+        }/* end info */
+    }/* end post */
+    
+    /* sidebar */
+    .sidebar{
+        position: relative;
+        padding-top: 10px;
+        /* advertisement */
+        .adv{
+            cursor: pointer;
+            padding: 80px;
+            text-align: center;
+            background-color: $graycolor1;
+            text-transform: capitalize;
+            color: $graycolor3;
+            border: 4px solid $maincolor4;
+            @include responsive(medium-screen){padding: 70px;}
+            @include responsive(big-phone-screen){padding: 95px;}
+            @include responsive(medium-phone-screen){padding: 70px;}
+            i{
+                font-size: $fontsize1;
+                color: $maincolor2;
+            }
+        }/* end adv */
+        
+        /* blog search */
+        .blog-search{
+            margin-top: 7px;
+            .form{
+                input{
+                    width: 90%;
+                    float: left;
+                    padding: 6px 8px;
+                    color: $maincolor1;
+                    border: 1px solid $subcolor2;
+                    border-right: 0;
+                    outline: 0;
+                    @include responsive(small-phone-screen){width: 80%;}
+                }/* end input */
+                .blog-btn{
+                    width: 10%;
+                    padding: 6px 8px;
+                    font-size: $fontsize6;
+                    text-transform: uppercase;
+                    border: 1px solid $maincolor2;
+                    border-left: 0;
+                    background-color: $maincolor2;
+                    color: $maincolor4;
+                    outline: 0;
+                    transition: all 0.2s ease-in-out;
+                    @include responsive(big-phone-screen){font-size: $fontsize7;}
+                    @include responsive(small-phone-screen){width: 20%;}
+                    &:hover{background-color: $subcolor2;}
+                }/* end blog-btn */
+            }/* end form */
+        }/* end blog-search */
+        /* get notification */
+        .get-notif{
+            @extend %global-sections-css2;
+            padding: 60px 15px;
+            text-align: center;
+            background-image: url('../images/blog/get-notif-image.jpg');
+            background-size: cover;
+            background-position: center;
+            image-rendering: -webkit-optimize-contrast;
+            @include responsive(medium-screen){
+                padding-right: 10px;
+                padding-left: 10px;
+            }            
+            .overlay{@extend %overlayBlue;}
+            .content{
+                position: relative;
+                h4{
+                    color: $maincolor4;
+                    text-transform: capitalize;
+                    margin-bottom: 15px;
+                }/* end h5 */               
+                .notif-form-content{
+                    form{
+                        width: 100%;
+                        input{
+                            width: 80%;
+                            float: left;
+                            padding: 7px 6px;
+                            background: none;
+                            border: 1px solid $maincolor2;
+                            border-right: 0;
+                            outline: 0;
+                            color: $maincolor4;
+                            @include responsive(medium-screen){font-size: $fontsize7;width: 70%;}
+                            @include responsive(medium-phone-screen){font-size: $fontsize7;}
+                        }/* end input */
+                        @include placeholderColor($maincolor5);
+                        .notif-btn{
+                            width: 20%;
+                            padding: 7px 6px;
+                            background-color: $maincolor2;
+                            color: $maincolor4;
+                            font-size: $fontsize6;
+                            border: 1px solid $maincolor2;
+                            border-left-color: transparent;
+                            transition: all 0.3s ease-in-out;
+                            @include responsive(medium-screen){font-size: $fontsize7;}
+                            @include responsive(big-phone-screen){font-size: $fontsize7;}
+                            &:hover{background-color: $maincolor1;border-left-color: $maincolor2;}
+                        }/* end notif-btn */                        
+                    }/* end form */
+
+                }/* end notif-form-content */
+            }/* end content */
+        }/* end get-notif */
+        /* popular stuff */
+        .popular{
+            @extend %global-sections-css2;
+            h4{@extend %sidebar-header;}            
+            .pop-list{
+                position: relative;
+                ul{
+                    li.pop{
+                        margin-bottom: 15px;
+                        .pop-inner{
+                            border-left: 1px solid $maincolor1;
+                            padding-left: 10px;
+                            .image-outer{
+                                display: table-cell;
+                                .image{
+                                    position: relative;
+                                    width: 108px;
+                                    margin-right: 15px;
+                                    @include responsive(small-phone-screen){margin-right: 10px;}
+                                    img{@extend %normal-image-style;}
+                                }/* end image */                        
+                            }/* end image-outer */
+
+                            .info{
+                                display: table-cell;
+                                vertical-align: top;
+                                @include responsive(medium-screen){width: 55%;}
+                                h5{
+                                    text-transform: capitalize;
+                                    margin: 0 0 2px 0;
+                                    letter-spacing: 0.4px;
+                                    a{
+                                        color: $maincolor1;
+                                        text-decoration: none;
+                                        transition: all 0.2s ease-in-out;
+                                        &:hover{color: $maincolor2;}
+                                    }
+                                }
+                                .date{
+                                    font-size: $fontsize7;
+                                    color: $graycolor2;
+                                    text-transform: capitalize;
+                                    @include responsive(big-phone-screen){font-size: $fontsize8}
+                                }
+                                p{
+                                    color: $graycolor2;
+                                    line-height: 23px;
+                                    margin-top: 5px;
+                                }
+                            }/* end info */                         
+                        }/* end pop-inner */
+                    }/* end pop */                    
+                }/* end ul */
+            }/* end pop-list */
+        }/* end popular */       
+        /* recent posts */
+        .recent-posts{
+            @extend %global-sections-css2;
+            h4{@extend %sidebar-header;}
+            ul{
+                list-style: none;
+                padding: 0;
+                li{
+                    text-transform: capitalize;
+                    font-size: $fontsize6;
+                    padding: 10px 0;
+                    border-bottom: 1px solid $maincolor2;
+                    color: $maincolor2;
+                    @include responsive(big-phone-screen){font-size: $fontsize7;}
+                    a{
+                        text-decoration: none;
+                        color: $maincolor1;
+                        padding-left: 5px;
+                        transition: all 0.2s ease-in-out;
+                        &:hover{
+                            color: $maincolor2;
+                        }
+                    }/* end a */
+                }/* end li */
+                li::before{
+                    content: "\f35a";
+                    font-weight: 900;
+                    font-family: "Font Awesome 5 Free";
+                }
+            }/* end ul */
+        }/* end recent-posts */
+        /* best users */
+        .best-users{
+            @extend %global-sections-css2;
+            border-bottom: 1px solid $graycolor1;
+            h4{@extend %sidebar-header;}
+            ul{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li.user{
+                    display: inline-block;
+                    margin-right: 15px;
+                    a{   
+                        display: block;
+                        img{
+                            width: 60px;
+                            border-radius: 50%;
+                            image-rendering: -webkit-optimize-contrast;
+                            @include responsive(medium-screen){width: 55px;}
+                            @include responsive(small-phone-screen){width: 45px;}
+                        }                   
+                    }
+                }               
+            }
+        }/* end best users */
+    }/* end sidebar */
+}/* end post */
+
+%sidebar-header{
+    text-transform: uppercase;
+    color: $maincolor1;
+    margin-bottom: 20px;
+    line-height: 36px;
+    span{
+        color: $maincolor2;
+        border-bottom: 1px solid $maincolor2;
+    }
+}

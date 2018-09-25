@@ -1,0 +1,260 @@
+@import 'main-style';
+
+/* start games list */
+.gl{
+    @extend %global-sections-css3;
+    
+    /* nav tabs */
+    .nav-tabs{
+        border-bottom: none;
+        float: none;
+        margin: auto;
+        padding: 0;
+        li{
+            text-align: center;
+            @include responsive(medium-phone-screen){padding-left: 11px;}
+            a{
+                position: relative;
+                text-transform: capitalize;
+                font-size: $fontsize4;
+                width: 150px;
+                height: 130px;
+                text-align: center;
+                border-radius: 0;
+                border: 1px solid $maincolor2;
+                line-height: 110px;
+                color: $maincolor2;
+                margin: auto;
+                transition: all 0.3s ease-in-out;
+                @include responsive(medium-screen){
+                    width: 135px;
+                    height: 122px;
+                    line-height: 102px;
+                }
+                @include responsive(tablet-screen){
+                    width: 135px;
+                    height: 122px;
+                    line-height: 102px;
+                }
+                @include responsive(big-phone-screen){
+                    width: 102px;
+                    height: 102px;
+                    line-height: 84px;
+                }
+                @include responsive(medium-phone-screen){
+                    font-size: $fontsize5;
+                    width: 94px;
+                    height: 94px;
+                    line-height: 77px;
+                }
+                @include responsive(small-phone-screen){
+                    width: 70px;
+                    height: 73px;
+                    line-height: 25px;
+                }
+                span{
+                    i{
+                        margin-left: 3px;
+                        padding-bottom: 5px;
+                        @include responsive(small-phone-screen){font-size: $fontsize6;}
+                    }
+                }
+                .arrow-down{
+                    position: absolute;
+                    left: 39%;
+                    bottom: -20px;
+                    width: 0;
+                    height: 0;
+                    border-left: 20px solid transparent;
+                    border-right: 20px solid transparent;
+                    border-top: 20px solid $maincolor2;
+                    opacity: 0;
+                    transition: all 0.3s ease-in-out;
+                    @include responsive(big-phone-screen){left: 31%;}
+                    @include responsive(small-phone-screen){
+                        left: 32%;
+                        bottom: -14px;
+                        border-left-width: 13px;
+                        border-right-width: 13px;
+                        border-top-width: 13px;
+                    }
+                }
+
+                &:hover{
+                    border-color: $maincolor2;
+                    background-color: $maincolor2;
+                    color: #fff;
+                    box-shadow: 5px 5px 8px $maincolor3;
+                    
+                }
+                &:focus{
+                    background-color: $maincolor2;
+                    color: #fff;
+                    box-shadow: 5px 5px 8px $maincolor3;
+                    .arrow-down{opacity: 1;}
+                }
+            }
+
+        }
+        .active{
+            a{
+                background-color: $maincolor2;
+                color: #fff;
+                box-shadow: 5px 5px 8px $maincolor3;
+                .arrow-down{opacity: 1;}
+                &:hover{border-color: $maincolor2;}
+                &:focus{border-color: $maincolor2;}
+                span{
+                    i{
+                        border-bottom: 1px solid #fff;
+                    }
+                }
+            }/* end a */
+        }/* end active */    
+    }/* end nav-tabs */
+    
+    /* tabs content the games list */
+    .tab-content{
+        position: relative;
+        padding: 40px 0;
+        .tab-pane{
+            .gamebox{
+                position: relative;
+                padding: 20px 0 30px 0;
+                border-bottom: 1px solid $maincolor3;
+                /* image of the gamebox */
+                .gamebox-image{
+                    border-right: 2px dashed $maincolor4;
+                    @include responsive(big-phone-screen){
+                        border: none;
+                        margin-bottom: 30px;
+                    }
+                    .image{
+                        position: relative;
+                        width: 100%;
+                        border: 5px solid $graycolor1;
+                        .rate{
+                            position: absolute;
+                            top: 30%;
+                            left: 11%;
+                            width: 100px;
+                            border-top: 2px solid $maincolor2;
+                            border-bottom: 2px solid $maincolor2;
+                            text-align: center;
+                            line-height: 100px;
+                            color: $maincolor2;
+                            font-size: $fontsize3;
+                            font-weight: bold;
+                            @include responsive(medium-screen){
+                                top: 25%;
+                                left: 8%;
+                            }
+                            @include responsive(tablet-screen){
+                                font-size: $fontsize4;
+                                width: 50px;
+                                line-height: 60px;
+                                left: 13%;
+                            }
+                            @include responsive(small-phone-screen){
+                                left: 7%;
+                                line-height: 91px;
+                                top: 27%;
+                            }
+                        }
+                        img{@extend %normal-image-style;}
+                    }/* end image */  
+                }/* end gamebox-image */
+                /* info in the gamebox */
+                .gamebox-info{
+                    h4{
+                        text-transform: capitalize;
+                        margin: 0 0 20px 0;
+                        a{
+                            text-decoration: none;
+                            color: $maincolor1;
+                            border-bottom: 1px solid $maincolor2;
+                            padding-right: 30px;
+                            padding-bottom: 5px;
+                            transition: all 0.3s ease-in-out;
+                            &:hover{color: $maincolor2;}
+                        }
+                    }/* end h4 */
+                    span{
+                        float: left;
+                        color: $maincolor2;
+                        font-size: $fontsize7;
+                        text-transform: capitalize;
+                        @include responsive(big-phone-screen){font-size: $fontsize8;}
+                    }/* end span */
+                    .date{
+                        float: right;
+                        @include responsive(small-phone-screen){
+                            float: none;
+                            display: block;
+                        }
+                    }/* end date */ 
+                    .offers{
+                        width: 100%;
+                        color: #000;
+                        text-transform: capitalize;
+                        i{
+                            color: $maincolor2;
+                            margin-right: 3px;
+                        }
+                    }/* end offers */
+                    p{color: $graycolor2;}
+                    .gamebox-btns{
+                        position: relative;
+                        margin: 15px 0 0 0;
+                        .row{
+                            padding: 0 15px;
+                            .mybtn{
+                                position: relative;
+                                border: 1px solid $maincolor2;
+                                margin-right: 15px;
+                                font-size: $fontsize6;
+                                text-transform: capitalize;
+                                padding: 0;
+                                @include responsive(medium-screen){font-size: $fontsize7;}
+                                @include responsive(tablet-screen){font-size: $fontsize7;}
+                                @include responsive(big-phone-screen){font-size: $fontsize7;margin-bottom: 10px;}
+                                @include responsive(small-phone-screen){width: 120px;}
+                                a{
+                                    display: block;
+                                    padding: 10px 0;
+                                    position: relative;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    color: $maincolor2;
+                                    transition: all 0.3s ease-out;
+                                }/* end a */
+                                .overlay{
+                                    @extend %overlayOrange;
+                                    width: 0;
+                                    background-color: $maincolor2;
+                                    transition: all 0.3s ease-out;
+                                }/* end overlay */
+                                &:hover{
+                                    a{color: $maincolor5;}
+                                    .overlay{width: 100%;}
+                                }
+                            }/* end mybtn */
+                            .cart-btn{
+                                border-color: $maincolor1;
+                                a{color: $maincolor1;}
+                                &:hover{
+                                    a{color: $maincolor2;}
+                                    .overlay{
+                                        background-color: $maincolor1;
+                                        width: 100%;
+                                    }
+                                }
+                            }/* end cart-btn */
+                        }/* end row */
+                    }/* end gamebox-btns */
+                }/* end gamebox-info */
+            }/* end gamebox */
+        }/* end tabpane */
+    }/* end tab-content */
+}
+/* end games list */

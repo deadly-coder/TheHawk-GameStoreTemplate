@@ -1,0 +1,71 @@
+@import 'main-style';
+
+/* start pc req page header */
+.pc-req-head{
+    @extend %global-sections-css3;
+    .req-head{
+        @include heading-with-background(games/game-head, 70px);
+    }/* end req-head */
+}
+/* end pc req page header */
+
+/* start requirements content */
+.req-content{
+    @extend %global-sections-css3;
+    h4{
+        color: $maincolor1;
+        text-transform: uppercase;
+        margin: 30px 0;
+        span{
+            color: $maincolor2;
+            border-bottom: 1px solid $maincolor2;
+        }
+    }
+    h4::after{       
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f0ad";
+        margin-left: 5px;
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li.info-panel{
+            padding: 25px 0;
+            border-bottom: 1px solid $maincolor4;
+            transition: all 0.3s ease-in-out;
+            .panel-header{
+                display: table-cell;
+                width: 185px;
+                @include responsive(big-phone-screen){width: 133px;}
+                h5{
+                    float: left;
+                    color: $maincolor1;
+                    text-transform: uppercase;
+                    transition: all 0.3s ease-in-out;
+                    i{margin-right: 5px;}
+                }
+            }
+            .panel-content{
+                display: table-cell;
+                padding: 0 15px;
+                vertical-align: bottom;
+                p{
+                    color: $graycolor2;
+                    text-transform: capitalize;
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+            &:hover{
+                border-color: $maincolor2;
+                .panel-header{
+                    h5{color: $maincolor2;}
+                }
+                .panel-content{
+                    p{color: $maincolor1;}
+                }
+            }
+        }/* end info-panel */        
+    }/* end ul */
+}/* end requirements content */

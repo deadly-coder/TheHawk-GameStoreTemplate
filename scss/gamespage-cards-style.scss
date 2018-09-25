@@ -1,0 +1,126 @@
+@import 'main-style';
+
+.rg{
+    @extend %global-sections-css3;
+    /* start games list */
+    .gameslist{
+        position: relative;
+        .gamebox-outer{
+            .gamebox-inner{
+                position: relative;
+                margin-bottom: 30px;
+                .image{
+                    position: relative;
+                    width: 100%;
+                    overflow: hidden;
+                    img{@extend %normal-image-style;}
+                    /* overlay on the image when hovering */
+                    .overlay{
+                        @extend %overlayBlue;
+                        text-align: center;
+                        padding-top: 83px;
+                        opacity: 0;
+                        transition: all 0.3s ease-in-out;
+                        @include responsive(tablet-screen){
+                            text-align: left;
+                            padding: 144px 10px 0 10px;
+                            opacity: 1;
+                            background:transparent;
+                        }
+                        @include responsive(big-phone-screen){
+                            text-align: left;
+                            padding: 173px 10px 0 10px;
+                            opacity: 1;
+                            background:transparent;
+                        }
+                        @include responsive(medium-phone-screen){padding-top: 144px}
+                        @include responsive(small-phone-screen){padding-top: 106px;}
+                        span{
+                            display: inline-block;
+                            text-transform: uppercase;
+                            font-size: $fontsize6;
+                            color: $maincolor2;
+                            padding: 5px 15px;
+                            background-color: $overlaycolorshade;
+                            margin: 0 2px;
+                            cursor: default;
+                            text-shadow: 0 0 6px $maincolor2;
+                            @include responsive(tablet-screen){
+                                font-size: $fontsize7;
+                                color: $maincolor4;
+                                border-color: $maincolor2;
+                                padding: 2px 10px;
+                                background-color: $maincolor2;
+                                text-shadow: 0;
+                            }
+                            @include responsive(big-phone-screen){
+                                font-size: $fontsize7;
+                                color: $maincolor4;
+                                border-color: $maincolor2;
+                                padding: 2px 10px;
+                                background-color: $maincolor2;
+                                text-shadow: 0;
+                            }                        
+                        }/* end span */
+                    }/* end overlay */
+                    /* a bar in the bottom of the image */
+                    .fixedbar{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        background-color: $maincolor2;
+                        color: $maincolor4;
+                        width: 100%;
+                        padding: 8px 12px;
+                        text-transform: capitalize;
+                        font-size: $fontsize7;
+                        i{
+                            margin-right: 3px;   
+                        }
+                        a{
+                            float:right;
+                            text-decoration: none;
+                            color: $maincolor4;
+                            &:hover{text-decoration: underline;}
+                        }
+                    }/* end fixedbar */
+                    &:hover{
+                        .overlay{opacity: 1;}                        
+                    } 
+                    @include responsive(medium-screen){height: 203px;}
+                }/* end image */
+                /* the info part style */
+                .info{
+                    padding: 10px 5px 8px 12px;
+                    border-left: 1px solid $maincolor3;
+                    border-right: 1px solid $maincolor3;
+                    border-bottom: 1px solid $maincolor3;
+                    h4{
+                        margin: 0;
+                        text-transform: capitalize;
+                        a{
+                            display: block;
+                            text-decoration: none;
+                            color: $maincolor1;
+                            transition: all 0.3s ease-in-out;
+                            &:hover{
+                                color: $maincolor2;
+                            }
+                        }   
+                    }
+                    span{
+                        font-size: $fontsize7;
+                        color: $maincolor2;
+                    }
+                    p{
+                        width: 100%;
+                        max-width: 100%;
+                        color: $graycolor2;
+                        margin-top: 10px;
+                    }    
+                }/* end info */
+            }/* end  gamebox-inner */
+        }/* end gamebox-outer */    
+    }
+    /* end games list*/
+}

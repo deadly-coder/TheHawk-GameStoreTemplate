@@ -1,0 +1,226 @@
+@import 'main-style';
+/* start best seller list */
+.BS-list{
+    @extend %global-sections-css3;
+    /* heading */
+    .heading{@extend %headingStyle1;}
+    /* start the list filter */
+    .filter{
+        @include responsive(tablet-screen){margin-bottom: 15px;}
+        @include responsive(big-phone-screen){margin-bottom: 15px;}
+        .search-bar{
+            .form{
+                .form-group{
+                    position: relative;
+                    margin-bottom: 15px;
+                    i{
+                        position: absolute;
+                        right: 0;
+                        width: 35px;
+                        height: 35px;
+                        text-align: center;
+                        line-height: 35px;
+                        color: $maincolor2;
+                        z-index: 2;
+                    }
+                    .myinput{
+                        position: relative;
+                        padding: 4px 35px 4px 7px;
+                        width: 100%;
+                        border: 1px solid $maincolor2;
+                        outline: 0;
+                        color: $maincolor1;
+                    }
+                    @include placeholderColor($maincolor1);
+                }
+            }/* end form */            
+        }/* end search bar */
+        .panel-group{
+            .panel{
+                background: transparent;
+                border: 0;
+                box-shadow: none;
+                .panel-heading{
+                    border-radius: 0;
+                    border-bottom: 1px solid $maincolor2;
+                    padding: 0 15px 0 0;
+                    .header{
+                        text-transform: capitalize;
+                        a{
+                            display: block;
+                            color: $maincolor2;
+                            text-decoration: none;
+                        }
+                        a::after{
+                            content: "\f107";
+                            font-family: "Font Awesome 5 Free";
+                            font-weight: 900;
+                            float: right;
+                        }
+                        a.collapsed::after{
+                            content: "\f105";
+                        }                    
+                    }/* header */
+                }/* panel-heading */
+                .panel-collapse{
+                    .body{
+                        list-style: none;
+                        padding: 20px 15px 10px 0;
+                        li{
+                            @extend %checkbox-style;
+                            margin: 5px 0;
+                            small{
+                                i{margin-left: 3px;}
+                                @include responsive(medium-screen){font-size: 78%;}
+                                @include responsive(big-phone-screen){font-size: 74%;}
+                            }
+                        }
+                    }/* body */
+                }/* end panel-collapse */
+            }/* end panel */
+        }/* end panel-group */ 
+        .reset{
+            margin-top: 15px;
+            button{
+                width: 100%;
+                font-size: $fontsize5;
+                text-transform: uppercase;
+                letter-spacing: 0.2px;
+                background-color: $maincolor2;
+                border: 1px solid $maincolor2;
+                color: $maincolor5;
+                padding: 5px 0;
+                transition: all 0.3s ease-in-out;
+                &:hover{
+                    background-color: $subcolor2;
+                    border-color: $subcolor2;
+                }
+            }
+        }
+    }/* end filter */
+    
+    /* start the list content */
+    .content{
+        .game-panel{
+            margin-bottom: 30px;
+            @include responsive(big-phone-screen){border: 0;padding: 0;}
+            .image{
+                display: table-cell;
+                @include responsive(big-phone-screen){display: block;margin-bottom: 10px;}
+                div{
+                    width: 200px;
+                    @include responsive(medium-screen){width: 180px;}
+                    @include responsive(tablet-screen){width: 175px;}
+                    @include responsive(big-phone-screen){width: 100%;}
+                    img{@extend %normal-image-style;}
+                }
+            }
+            .description{
+                display: table-cell;
+                vertical-align: top;
+                width: 300px;
+                @include responsive(medium-screen){width: 250px;}
+                @include responsive(tablet-screen){width: 285px;}
+                @include responsive(big-phone-screen){display: block;width: 100%;}
+                div{
+                    @extend %headingStyle2;
+                    margin-left: 15px;
+                    margin-bottom: 0;
+                    @include responsive(big-phone-screen){margin: 0 0 10px 0;}
+                    h4{text-transform: capitalize;}
+                    .date{
+                        text-transform: capitalize;
+                        color: $graycolor3;
+                        display: inline-block;
+                        padding: 1px 5px 1px 0;
+                        font-size: $fontsize7; 
+                        @include responsive(medium-screen){font-size: $fontsize7 - 1;}
+                        @include responsive(medium-phone-screen){font-size: $fontsize8;}
+                    }                    
+                }
+            }
+            .price{
+                display: table-cell;
+                padding-left: 15px;
+                @include responsive(medium-screen){vertical-align: top;}
+                @include responsive(tablet-screen){vertical-align: top;}
+                @include responsive(big-phone-screen){
+                    display: block;
+                    padding: 0;
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+                span{
+                    display: block;
+                    width: 80px;
+                    height: 80px;
+                    line-height: 80px;
+                    margin: 0 auto;
+                    text-align: center;
+                    border: 2px solid $maincolor1;
+                    border-radius: 50%;
+                    color: $maincolor2;
+                    font-size: $fontsize5;
+                    @include responsive(medium-screen){font-size: $fontsize6;}  
+                    @include responsive(tablet-screen){font-size: $fontsize6;}                    
+                    @include responsive(big-phone-screen){
+                        width: 70px;
+                        height: 70px;
+                        line-height: 70px; 
+                        margin: 0;
+                        font-size: $fontsize6;
+                    }
+                }
+            }
+            .game-panel-btns{
+                display: table-cell;
+                vertical-align: baseline;
+                padding-left: 15px;
+                @include responsive(medium-screen){vertical-align: top;}
+                @include responsive(tablet-screen){vertical-align: top;}
+                @include responsive(big-phone-screen){display: block;padding: 0;width: 100%;}
+                a{
+                    display: inline-block;
+                    text-decoration: none;
+                    background-color: $maincolor1;
+                    color: $maincolor5;
+                    padding: 4px 9px;
+                    text-transform: capitalize;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{background-color: $subcolor1;}
+                    @include responsive(medium-screen){
+                        display: block;
+                        margin-bottom: 5px;
+                        text-align: center;
+                    }
+                    @include responsive(tablet-screen){
+                        display: block;
+                        margin-bottom: 5px;
+                        text-align: center;
+                    }
+                    @include responsive(big-phone-screen){
+                        font-size: $fontsize7;
+                        padding: 5px 12px;
+                    }
+                }
+            }
+        }/* end game-panel */
+        /* load more content button */
+        .load-more{
+            width: 100%;
+            text-align: center;
+            margin: 20px 0;
+            @include responsive(big-phone-screen){margin: 65px 0 20px 0;}
+            button{
+                background: none;
+                border: none;
+                font-size: $fontsize5;
+                text-transform: uppercase;
+                color: $maincolor1;
+                transition: all 0.2s ease-in-out;
+                &:hover{color: $maincolor2;}
+                @include responsive(big-phone-screen){font-size: 18px;}
+            }
+        }/* end load-more */
+    }/* end content */     
+}/* end BS-list */

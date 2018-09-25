@@ -1,0 +1,83 @@
+@import 'main-style';
+
+/* start coming soon heading */
+.heading{
+    padding-top: 10px;
+    .heading-inner{
+        @extend %headingStyle1;
+    }
+}/* end heading */
+
+/* start coming soon games */
+.csoon-games{
+    @extend %global-sections-css2;
+    .gamebox{
+        position: relative;
+        margin-bottom: 30px;
+        .must-hide{display: none;}
+        .image{
+            position: relative;
+            width: 100%;
+            @extend %center-the-items-inside-me;
+            img{
+                @extend %normal-image-style;
+                -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+                filter: grayscale(100%);                 
+            }
+            .platform{
+                position: absolute;
+                display: block;
+                width: 40px;
+                color: $maincolor5;
+                background-color: $maincolor2;
+                padding: 3px 0;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: $fontsize8;
+                left: -15px;
+                z-index: 9;
+                &:nth-child(1){top: 13px;}
+                &:nth-child(2){top: 47px;}
+                &:nth-child(3){top: 81px;}
+            }
+            .date{
+                position: absolute;
+                display: block;
+                width: 140px;
+                text-align: center;
+                padding: 10px 0;
+                font-size: $fontsize6;
+                color: $maincolor2;
+                background-color: $overlaycolorblack;
+                font-weight: 400;
+                text-shadow: 0 0 4px $maincolor2;
+                @include responsive(big-phone-screen){font-size: $fontsize7;font-weight: 600;}
+            }
+        }
+        .info{
+            padding: 10px 5px 8px 12px;
+            border-left: 1px solid $maincolor3;
+            border-right: 1px solid $maincolor3;
+            border-bottom: 1px solid $maincolor3;
+            h4{
+                margin: 0;
+                text-transform: capitalize;
+                a{
+                    display: block;
+                    text-decoration: none;
+                    color: $maincolor1;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                        color: $maincolor2;
+                    }
+                }   
+            }
+            p{
+                width: 100%;
+                max-width: 100%;
+                color: $graycolor2;
+                margin-top: 10px;
+            }    
+        }/* end info */        
+    }
+}

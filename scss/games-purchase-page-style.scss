@@ -1,0 +1,74 @@
+@import 'main-style';
+
+.purchase-cards{
+    @extend %global-sections-css3;
+    .purchase-version{
+        position: relative;
+        margin: 0 0 15px 0;
+        .image{
+            position: relative;
+            .overlay{
+                @extend %overlayBlue;
+                @extend %center-the-items-inside-me;
+                &::before{
+                    @extend %circle;
+                    top: -25px;
+                }
+                h5{
+                    color: $maincolor5;
+                    margin: 0;
+                    text-align: center;
+                    text-transform: uppercase;
+                    margin-bottom: 30px;   
+                    a{
+                        display: block;
+                        background-color: $overlaycolorshade;
+                        color: $maincolor5;
+                        padding: 10px 15px;
+                        text-decoration: none;
+                        transition: all 0.3s ease-in-out;
+                        &:hover{color: $maincolor2;}
+                    }                    
+                }
+            }
+            img{
+                @extend %normal-image-style;
+            }
+        }/* end image */
+        .content{
+            padding: 15px 0;
+            .version-info{
+                p{
+                    color: $maincolor1;
+                    text-transform: capitalize;
+                    cursor: default;
+                }
+                ul{
+                    padding: 0;
+                    list-style: none;
+                    font-size: $fontsize6;
+                    text-transform: capitalize;
+                    color: $maincolor1;
+                    cursor: default;
+                    @include responsive(big-phone-screen){font-size: $fontsize7;}
+                    li::before{
+                        content: '\f105';
+                        font-family: 'Font Awesome 5 free';
+                        font-weight: 900;
+                        margin-right: 3px;
+                        color: $maincolor2;
+                    }
+                }
+            }
+        }
+    }/* end purchase version */
+    .purchase-version:last-child{
+        .image{
+            .overlay{
+                @extend %overlayOrange;
+                h5{color: $maincolor4;}
+            }
+        }
+    }/* the last child of the purchase version */ 
+      
+}/* end purchase-cards */

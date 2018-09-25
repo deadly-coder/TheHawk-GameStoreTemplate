@@ -1,0 +1,99 @@
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@import "main-style-comps/colors";
+@import "main-style-comps/mixins";
+@import "main-style-comps/fonts";
+@import "main-style-comps/placeholders";
+@import "main-style-comps/navs";
+@import "main-style-comps/footer";
+
+body{
+    height: 100%;
+	font-family: $fontstyle1;
+    @include responsive(big-phone-screen){overflow-x: hidden;}
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;        
+        li{letter-spacing: 0.7px;}
+    } 
+}
+/* some style for the row class*/
+.row{display: flex;flex-wrap: wrap;}
+/* the shopping summary style for cart and payment pages */
+.shopping-summary{
+    margin-bottom: 30px;
+    .ss-inner{
+        h4{
+            text-transform: uppercase;
+            color: $maincolor1;
+            border-bottom: 1px solid $maincolor2;
+            padding: 7px 2px;
+            margin-bottom: 0;
+            span{
+                float: right;
+                color: $maincolor2;
+            }
+        }
+        h5{
+            text-transform: uppercase;
+            color: $maincolor1;
+            padding: 10px 5px;
+            span{
+                float: right;
+                color: $maincolor2;
+            }
+        }
+        h5.final-price{
+            border-top: 1px solid $maincolor1;
+            border-bottom: 1px solid $maincolor1;
+            span{color: $maincolor1;}
+        }
+
+        .paypage-btn{
+            display: block;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: 1px solid $maincolor1;
+            text-align: center;
+            color: $maincolor1;
+            font-size: $fontsize4;
+            padding: 6px 2px;
+            margin-bottom: 8px;
+            transition: all 0.3s ease-in-out; 
+            &:hover{
+                border-color: $maincolor2;
+                color: $maincolor2;
+            }
+            @include responsive(big-phone-screen){font-size: $fontsize6;}
+        }/* end paypage-btn */
+        .my-btn{
+            @extend .paypage-btn;
+            width: 100%;
+            background: none;
+            @include responsive(big-phone-screen){font-size: $fontsize6;}
+            &:focus{
+                outline: 0;
+                color: $maincolor2;
+                border-color: $maincolor2;
+            }
+        }/* end save-btn */
+        p{
+            margin: 5px 0;
+            color: $maincolor1;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            padding-left: 0;
+            li{margin-right: 5px;}
+        }
+    }/* ss-inner */
+}/* end shopping-summary */

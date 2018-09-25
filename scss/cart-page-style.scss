@@ -1,0 +1,94 @@
+@import 'main-style';
+
+/* start the shopping cart */
+.shopping-cart{
+    @extend %global-sections-css2;
+
+    /* the shopping items */
+    .shopping-items{
+        .item{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 0 25px 0;
+            padding: 10px 0;
+            border-bottom: 1px solid $maincolor4;
+            .image{
+                margin-right: 10px;
+                width: 15%;
+                @include responsive(medium-phone-screen){margin-bottom: 15px;width: 40%;}
+                div{
+                    width: 100%;
+                    img{@extend %normal-image-style;}
+                }
+            }
+            .description{
+                margin-right: 10px;
+                width: 25%;
+                @include responsive(small-phone-screen){width: 50%;}
+                h5{
+                    color: $maincolor1;
+                    margin: 0;
+                    text-transform: capitalize;
+                }
+                .platform{
+                    display: inline-block;
+                    color: $maincolor5;
+                    font-size: $fontsize8;
+                    text-transform: uppercase;
+                    background-color: $maincolor2;
+                    padding: 2px 5px;
+                    margin-right: 3px;
+                    cursor: default;
+                    @include responsive(big-phone-screen){font-size: $fontsize9;margin-right: 1px;}
+                }
+            }
+            .quantity{
+                margin-right: 10px;
+                width: 20%;
+                @include responsive(small-phone-screen){width: 30%;}
+                input{
+                    border: 0;
+                    width: 32px;
+                    text-align: center;
+                    font-size: $fontsize6;
+                    cursor: default;
+                }
+                button{
+                    background: none;
+                    border: 0;
+                    font-size: $fontsize6;
+                    @include responsive(big-phone-screen){padding: 0;}
+                }
+                .minus-btn{
+                    color: $maincolor1;
+                    &:focus{outline: 0;}
+                }
+                .plus-btn{
+                    color: $maincolor2;
+                    &:focus{outline: 0;}
+                }  
+            }/* end quantity */
+            .total-price{
+                margin-right: 10px;
+                width: 20%;
+                @include responsive(medium-phone-screen){width: 40%;padding-top: 3px;}
+                h5{margin: 0;}
+            }
+            .remove-btn{
+                width: 14%;
+                background: none;
+                border: 0;
+                font-size: $fontsize4;
+                color: $maincolor1;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+                &:hover{color: $maincolor2;}
+                @include responsive(medium-screen){width: 13%;font-size: $fontsize5;}
+                @include responsive(big-phone-screen){width: 9%;font-size: $fontsize6;}
+                @include responsive(medium-phone-screen){width: 40%;}
+                @include responsive(small-phone-screen){width: 21%;}
+            }
+        }/* end item */
+    }/* end shopping-items */
+}/* end the shopping cart */
+

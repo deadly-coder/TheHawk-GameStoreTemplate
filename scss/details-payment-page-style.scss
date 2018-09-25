@@ -1,0 +1,35 @@
+@import 'main-style';
+
+.PD{
+    @extend %global-sections-css2;
+    /* billing details */
+    .BD{
+        .heading{@extend %headingStyle1;}
+        .form{
+            margin-right: 0;
+            margin-left: 0;
+            .form-group{
+                padding-left: 0;
+                .myinput{
+                    width: 100%;
+                    padding: 6px 38px 6px 5px;
+                    border: 1px solid $maincolor1;
+                    color: $maincolor2;
+                    &:focus{
+                        outline: 0;
+                        border-color: $maincolor2;
+                    }                    
+                }
+                @include placeholderColor($maincolor3);
+            }
+            h5{
+                color: $maincolor1;
+                text-transform: capitalize;
+                padding-left: 0;
+            }
+            .RMPD{@extend %checkbox-style;}
+        }
+    }/* end BD */
+    .PO{@extend .BD;}
+    
+}/* end PD */

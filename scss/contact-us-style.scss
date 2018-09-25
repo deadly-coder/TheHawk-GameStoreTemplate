@@ -1,0 +1,113 @@
+@import 'main-style';
+
+.contact-us{
+    @extend %global-sections-css3;
+    /* heading */
+    .heading{@extend %headingStyle1;}
+    .contact-form{
+        position: relative;
+        @include responsive(tablet-screen){margin-bottom: 15px;}
+        @include responsive(big-phone-screen){margin-bottom: 15px;}      
+        h5{
+            text-transform: capitalize;
+            color: $maincolor1;
+            margin-bottom: 15px;
+            cursor: default;
+            span{color: $maincolor2;}
+        }
+        .form{
+            @include placeholderColor($graycolor2);
+            .form-group{
+                .myinput{
+                    width: 100%;
+                    display: block;
+                    margin-bottom: 15px;
+                    padding: 10px 15px;
+                    outline: 0;
+                    border: 1px solid $maincolor3;
+                    color: $maincolor1;
+                    transition: all 0.3s ease-in-out;
+                    @include responsive(tablet-screen){width: 100%;}
+                    @include responsive(big-phone-screen){width: 100%;}
+                    @include responsive(medium-phone-screen){font-size: $fontsize7;}
+                    &:focus{border-color: $subcolor2;}
+                }                
+            }/* end form-group */
+
+            .contact-form-btn{
+                background-color: $maincolor2;
+                border: 0;
+                padding: 8px 30px;
+                text-transform: uppercase;
+                color: $maincolor5;
+                transition: all 0.3s ease-in-out;
+                &:hover{background-color: $subcolor2;}
+            }
+        }
+    }/* end contact-form */
+    .contact-other{
+        position: relative;
+        .get-notif{
+            position: relative;
+            background-image: url('../images/contact-us-get-notif.jpg');
+            background-size: cover;
+            background-position: top;
+            image-rendering: -webkit-optimize-contrast;
+            padding: 100px 0;
+            text-align: center;
+            box-shadow: 2px 2px 4px $maincolor3;
+            @include responsive(big-phone-screen){padding: 57px 15px;}
+            @include responsive(small-phone-screen){padding: 57px 0px;}
+            .overlay{@extend %overlayOrange;}
+            h4{
+                position: relative;
+                text-transform: capitalize;
+                color: $maincolor4;
+                margin-bottom: 15px;
+            }
+            .form{
+                position: relative;
+                width: 70%;
+                margin: auto;
+                @include placeholderColor($maincolor4);
+                .myinput{
+                    width: 80%;
+                    padding: 7px 12px;
+                    background: transparent;
+                    border: 1px solid $maincolor4;
+                    border-right: 0;
+                    outline: 0;
+                    float: left;
+                    color: $maincolor4;
+                }
+                .get-notif-btn{
+                    width: 20%;
+                    padding: 7px 12px;
+                    font-size: $fontsize6;
+                    background-color: $maincolor4;
+                    border: 1px solid $maincolor4;
+                    border-left: 0;
+                    outline: 0;
+                    color: $maincolor1;
+                    transition: all 0.3s ease-in-out;
+                    @include responsive(big-phone-screen){font-size: $fontsize7;}
+                    &:hover{color: $maincolor2;}
+                }
+            }
+        }/* end get-notif */
+        .pls-sgn{
+            position: relative;
+            padding-top: 15px;
+            p{
+                text-transform: capitalize;
+                color: $maincolor1;
+                a{
+                    text-decoration: none;
+                    color: $maincolor2;
+                    border-bottom: 1px solid $maincolor2;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }/* end contact-other */
+}/* end contact-us */

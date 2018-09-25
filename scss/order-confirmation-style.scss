@@ -1,0 +1,29 @@
+@import 'main-style';
+
+.CM{
+    @extend %global-sections-css2;
+    text-align: center;
+    h3{
+        color: $maincolor1;
+        text-transform: uppercase;
+        &:first-of-type{
+            font-weight: 600;
+            border-bottom: 1px solid $maincolor3;
+            padding-bottom: 20px;
+        }
+    }
+    p{color: $maincolor1;}
+    .mybtn{
+        display: inline-block;
+        text-decoration: none;
+        font-size: $fontsize6;
+        color: $maincolor5;
+        background-color: $maincolor2;
+        padding: 6px 25px;
+        text-transform: uppercase;
+        margin-top: 20px;
+        transition: all 0.3s ease-in-out;
+        &:hover{background-color: $maincolor1;}
+        @include responsive(big-phone-screen){font-size: $fontsize7;}
+    }
+}

@@ -1,0 +1,725 @@
+@import 'main-style';
+
+/* heading */
+.pp-header{
+    margin-bottom: 50px;
+    @include responsive(tablet-screen){margin-bottom: 70px;}
+    .pp-header-inner{
+        @include heading-with-background(user-background, 100px);
+        @include responsive(medium-screen){padding: 85px;}
+        @include responsive(big-phone-screen){padding: 80px;}
+        @include responsive(small-phone-screen){padding: 87px;}
+        .overlay{
+            @extend %overlayAwesome;
+            @extend %center-the-items-inside-me; 
+            h4{
+                text-transform: none;
+                color: $maincolor5;
+                @include responsive(tablet-screen){
+                    position: absolute;
+                    right: 124px;
+                    bottom: -17px;
+                    padding: 12px 51px 15px 0;                    
+                }
+                @include responsive(big-phone-screen){
+                    position: absolute;
+                    top: -5px;
+                    left: 73px;
+                    display: none;
+                }
+            }
+            .Pimage{
+                width: 130px;
+                height: 130px;
+                border-radius: 50%;
+                border: 2px solid $maincolor5;
+                overflow: hidden;
+                position: absolute;
+                bottom: -60px;
+                z-index: 3;
+                img{@extend %normal-image-style;}
+                @include responsive(medium-screen){width: 120px;height: 120px;}
+                @include responsive(tablet-screen){right: 22px;width: 120px;height: 120px;}
+                @include responsive(big-phone-screen){width: 60px;height: 60px;bottom: 130px;left: 8px;}
+            }
+            .change-background{
+                position: absolute;
+                right: 30px;
+                top: 15px;
+                @include responsive(big-phone-screen){right: 6px;top: 4px;}
+                .form{
+                    .choose-background{
+                        .file-up{
+                            width: 0.1px;
+                            height: 0.1px;
+                            opacity: 0;
+                            overflow: hidden;
+                            position: absolute;
+                            z-index: -1;
+                        }
+                        label{
+                            display: inline-block;
+                            max-width: 300px;
+                            color: $maincolor5;
+                            background-color: $overlaycolorblack;
+                            border: 1px solid $maincolor5;
+                            padding: 5px 20px;
+                            font-weight: 500;
+                            text-transform: uppercase;
+                            letter-spacing: 0.7px;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            cursor: pointer;
+                            transition: all 0.3s ease-in-out;
+                            &:hover{color: $maincolor2;}
+                            i{margin-right: 3px;}
+                            @include responsive(big-phone-screen){
+                                padding: 5px 15px;
+                                border: 0;
+                                span{display: none;}
+                                i{margin: 0;}
+                            }
+                        }                        
+                    }
+                }
+            }
+            .overview-p{
+                position: absolute;
+                top: 35px;
+                left: 40px;
+                width: 350px;
+                text-align: left;
+                pointer-events: none;
+                @include responsive(big-phone-screen){
+                    left: 0;
+                    top: 42px;
+                    width: auto;
+                    text-align: center;
+                    padding: 0 15px;
+                }
+                p{color: $maincolor4;}
+                span{
+                    color: $maincolor2;
+                    font-size: $fontsize4;
+                    text-transform: uppercase;
+                    @include responsive(medium-screen){font-size: $fontsize5;}
+                    @include responsive(tablet-screen){font-size: $fontsize5;}
+                    @include responsive(big-phone-screen){font-size: $fontsize6;font-weight: 600;}
+                }
+            }
+            .other-plinks{
+                position: absolute;
+                left: 0;
+                bottom: -50px;
+                border-bottom: 1px solid $maincolor3;
+                width: 45%;
+                text-align: left;
+                @include responsive(tablet-screen){width: 80%;}
+                @include responsive(big-phone-screen){width: 100%;text-align: center;}
+                li{
+                    display: inline-block;
+                    margin-right: 10px;
+                    @include responsive(big-phone-screen){margin: 0 5px;}
+                    a{
+                        display: block;
+                        text-decoration: none;
+                        font-size: $fontsize6;
+                        color: $maincolor1;
+                        text-transform: uppercase;
+                        padding-bottom: 10px;
+                        border-bottom: 2px solid transparent;
+                        transition: all 0.3s ease-in-out;
+                        &:hover{border-color: $maincolor1;}
+                        @include responsive(medium-screen){font-size: $fontsize6 - 1;}
+                        @include responsive(big-phone-screen){font-size: $fontsize7;}
+                        @include responsive(medium-phone-screen){
+                            span{display: none;}
+                            font-size: $fontsize6;
+                            padding: 0 10px 10px 10px;                            
+                        }
+                    }
+                    &.active{
+                        a{border-color: $maincolor1;}
+                    }
+                }
+            }
+        }
+    }    
+}/* end pp-header */
+
+/* profile settings */
+.profile-set{
+    @extend %global-sections-css3;
+    .row{
+        .set-edit{
+            position: relative;
+            margin-bottom: 20px;
+            .form{
+                .inputs-block{margin-bottom: 60px;}
+                h4{
+                    text-transform: uppercase;
+                    color: $maincolor1;
+                    margin-bottom: 20px;
+                    span{
+                        color: $maincolor2;
+                        border-bottom: 1px solid $maincolor2;
+                    }
+                }/* end h4 */
+                .image{
+                    width: 70px;
+                    height: 70px;
+                    margin-bottom: 10px;
+                    img{@extend %normal-image-style;}
+                }/* end image */
+                .choose-image{
+                    margin-bottom: 5px;
+                    .file-up{
+                        width: 0.1px;
+                        height: 0.1px;
+                        opacity: 0;
+                        overflow: hidden;
+                        position: absolute;
+                        z-index: -1;
+                    }
+                    label{
+                        max-width: 60%;
+                        display: inline-block;
+                        color: $maincolor5;
+                        background-color: $maincolor2;
+                        padding: 5px 10px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        letter-spacing: 0.4px;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        cursor: pointer;
+                        transition: all 0.3s ease-in-out;
+                        &:hover{background-color: $subcolor2;}
+                        i{margin-right: 3px;}
+                        @include responsive(medium-screen){font-size: $fontsize7;}
+                        @include responsive(big-phone-screen){font-size: $fontsize7;}
+                    }
+                }/* end choose-image */
+                /* the form buttons */
+                button{
+                    color: $maincolor5;
+                    border: none;
+                    background-color: $maincolor2;
+                    padding: 5px 10px;
+                    text-transform: uppercase;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{background-color: $subcolor2;}
+                    &.SI-btn{display: block;}
+                }/* end button */
+                .form-group{
+                    margin-bottom: 15px;
+                    .myinput{
+                        width: 100%;
+                        display: block;
+                        margin-bottom: 15px;
+                        padding: 10px 15px;
+                        outline: 0;
+                        border: 1px solid $maincolor3;
+                        color: $maincolor1;
+                        transition: all 0.3s ease-in-out;
+                        @include responsive(big-phone-screen){width: 100%;}
+                        &:focus{border-color: $overlaycolor2;}               
+                    }                    
+                }/* end form-group */                      
+                .save-changes{
+                    color: $maincolor5;
+                    border: none;
+                    background-color: $maincolor2;
+                    padding: 5px 10px;
+                    text-transform: uppercase;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{background-color: $subcolor2;}
+                }
+            }/* end form */
+        }/* end set-edit */
+        
+        /* start info-preimum-ads */
+        .info-premium-ads{
+            .adv{
+                background-color: $graycolor1;
+                border: 3px solid $maincolor4;
+                text-align: center;
+                padding: 30px 0;
+                margin: 0 0 35px 0;
+                h5{color:$maincolor2;text-transform: none;}
+            }/* end adv */
+            h5{
+                text-transform: capitalize;
+                color: $maincolor1;
+                letter-spacing: 0.4px;
+                span{color: $maincolor2;}
+            }
+            .images{
+                margin-bottom: 15px;
+                .image{
+                    position: relative;
+                    width: 80px;
+                    display: inline-block;
+                    margin-right: 3px;
+                    margin-bottom: 5px;
+                    img{@extend %normal-image-style;}
+                }
+            }/* end images */
+            p{
+                text-transform: capitalize;
+                color: $maincolor1;
+                span{color: $maincolor2;}
+                &:last-of-type{
+                    border-bottom: 1px solid $maincolor4;
+                    padding-bottom: 10px;
+                }
+            }/* end p */
+            .premium{
+                display: block;
+                text-decoration: none;
+                text-align: center;
+                text-transform: uppercase;
+                color: $maincolor5;
+                margin: 20px 0;
+                padding: 15px 0;
+                font-size: $fontsize3;
+                background-color: $maincolor2;
+                transition: all 0.3s ease-in-out;
+                @include responsive(medium-screen){font-size: $fontsize4;}
+                @include responsive(big-phone-screen){font-size: $fontsize6;}
+                &:hover{background-color: $subcolor2;}
+            }/* end premium */
+            .form{
+                h4{
+                    text-transform: uppercase;
+                    color: $maincolor1;
+                    margin-bottom: 20px;
+                    span{color: $maincolor2;border-bottom: 1px solid $maincolor2;}
+                }
+                .inputs-block{
+                    margin-bottom: 60px;
+                    .form-group{
+                        .mybtn{
+                            text-transform: uppercase;
+                            padding: 6px 15px; 
+                            border: 0;
+                            color: $maincolor5;
+                            margin-bottom: 2px;
+                            &.steam{background-color: #616161;}
+                            &.facebook{background-color: #3b5998;}
+                            &.twitch{background-color: #6441a5;}
+                            @include responsive(medium-screen){width: 49%;}
+                            @include responsive(tablet-screen){display: block;width: 100%;}
+                            @include responsive(big-phone-screen){display: block;width: 100%;}
+                        }
+                        &.notifs{@extend %checkbox-style;}
+                    }                    
+                }
+            }
+        }/* end info-premium-ads */
+    }/* end row */
+}/* end profile-set */
+
+/* start wallet content */
+.wc{
+    @extend %global-sections-css3;
+    h4{
+        text-transform: uppercase;
+        color: $maincolor1;
+        margin-bottom: 20px;
+        span{color: $maincolor2;}            
+    }
+    p.not{
+        text-transform: capitalize;
+        color: $maincolor1;
+    }
+    .form{
+        .form-group{
+            margin-bottom: 35px;
+            width: 50%;
+            @include responsive(tablet-screen){width: 65%;}
+            @include responsive(big-phone-screen){width: auto;}
+            .myinput{
+                width: 70%;
+                float: left;
+                margin-bottom: 15px;
+                padding: 10px 15px;
+                outline: 0;
+                border: 1px solid $maincolor3;
+                border-right: 0;
+                color: $maincolor1;
+                transition: all 0.3s ease-in-out;
+                &:focus{border-color: $overlaycolor2;}               
+            }
+            .apply-btn{
+                width: 30%;
+                padding: 10px 0;
+                font-size: $fontsize6;
+                background-color: $maincolor2;
+                border: 1px solid $maincolor2;
+                border-left: 0;
+                color: $maincolor5;
+                transition: all 0.3s ease-in-out;
+                &:hover{background-color: $maincolor1;border-color: $maincolor1;}
+                @include responsive(big-phone-screen){font-size: $fontsize7;}
+            }
+        }
+    }
+}/* end wallet content */
+
+/* start purchase history content */
+.ph{
+    @extend %global-sections-css3;
+    h4{
+        text-transform: uppercase;
+        color: $maincolor1;
+        margin-bottom: 20px;
+        span{color: $maincolor2;}            
+    }    
+    p{text-transform: capitalize;color: $maincolor1;}
+    ul.content{
+        display: block;
+        width: 50%;
+        @include responsive(tablet-screen){width: 100%;}
+        @include responsive(big-phone-screen){width: 100%;}
+        li.single-purchase{
+            display: block;
+            width: 100%;
+            font-size: $fontsize5;
+            text-transform: capitalize;
+            margin-bottom: 15px;
+            a{
+                text-decoration: none;
+                color: $maincolor1;
+                transition: all 0.3s ease-in-out;
+                &:hover{color: $maincolor2;}
+            }
+            span.price{
+                display: inline-block;
+                float: right;
+            }
+        }
+    }
+}/* end purchase history content */
+
+/* start profile overview */
+.po{
+    @extend .ph;
+    .SBC{margin-bottom: 100px;}
+    .left{
+        #edit-description{
+            display: block;
+            background: none;
+            border: 0;
+            font-size: $fontsize5;
+            color: $maincolor1;
+            padding: 0;
+            margin: 0 0 5px 0;
+            width: auto;
+        }
+        p{&.disappear{display: none;}}
+        .form{
+            display: none;
+            .form-group{
+                textarea{
+                    padding: 10px;
+                    width: 100%;
+                    color: $maincolor1;
+                    background-color: $graycolor1;
+                    border: 2px solid $maincolor4;
+                    transition: all 0.3s ease-in-out;
+                    &:focus{border-color: $maincolor2;}
+                }
+            }
+            .mybtn{
+                padding: 5px 10px;
+                background-color: $maincolor1;
+                border: 0;
+                text-transform: uppercase;
+                color: $maincolor5;
+                transition: all 0.3s ease-in-out;
+                &:hover{background-color: $subcolor1;}
+            }
+            #cancel-description{
+                background-color: $graycolor3;
+                &:hover{background-color: $graycolor2;}
+            }
+            span{
+                display: inline-block;
+                margin-left: 5px;
+                font-size: 18px;
+                color: black;                
+            }
+            &.appear{display: block;}
+        }
+        .rac{
+            .single-A{
+                margin-bottom: 20px;
+                .date-time{
+                    display: table-cell;
+                    width: 180px;
+                    padding-right: 10px;
+                    border-right: 1px solid $maincolor1;
+                    @include responsive(big-phone-screen){width: 130px;}
+                    @include responsive(small-phone-screen){width: 112px;}
+                    span{
+                        display: block;
+                        font-size: $fontsize5;
+                        text-transform: capitalize;
+                        color: $maincolor1;
+                        i{color: $maincolor2;}
+                        &.date{color: $graycolor3;}
+                        @include responsive(medium-screen){font-size: $fontsize6;}
+                        @include responsive(big-phone-screen){font-size: $fontsize7;}
+                        @include responsive(medium-phone-screen){font-size: $fontsize7;}
+                    }
+                }
+                .activity{
+                    display: table-cell;
+                    padding-left: 15px;
+                    .activity-title{
+                        margin: 0 0 5px 0;
+                        text-transform: capitalize;
+                        a{
+                            text-decoration: none;
+                            color: $maincolor1;
+                            transition: all 0.3s ease-in-out;
+                            &:hover{color: $maincolor2;}
+                        }
+                    }
+                    .activity-type{color: $graycolor2;margin-bottom: 0;}
+                }
+            }
+        }
+        .AL-btn{
+            display: inline-block;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $maincolor2;
+            transition: all 0.3s ease-in-out;
+            &:hover{color: $subcolor2;}
+        }
+        /* security level classes style */
+        @each $class, $icon, $word, $color, $margin, $fontFamily, $fontWeight in 
+            (high, "\f00c", "high", $maincolor2, 5px, "Font Awesome 5 Free", 900),
+            (medium, "\f164", "medium", $maincolor2, 5px, "Font Awesome 5 Free", 200),
+            (low, "\f119", "low", $maincolor2, 5px, "Font Awesome 5 Free", 200){
+                .#{$class}::after {
+                    content: $icon;
+                    font-family: $fontFamily;
+                    color: $color;
+                    font-weight: $fontWeight; 
+                }
+                .#{$class}::before{
+                    content: $word;
+                    color: $color;
+                    margin-right: $margin;                    
+                }
+        }
+        /* end security level classes style */
+       
+    }/* end left */
+    .right{
+        .RPC{
+            li.single-purchase{
+                display: block;
+                width: 100%;
+                font-size: $fontsize5;
+                text-transform: capitalize;
+                margin-bottom: 15px;
+                a{
+                    text-decoration: none;
+                    color: $maincolor1;
+                    transition: all 0.3s ease-in-out;
+                    &:hover{color: $maincolor2;}
+                }
+                span.price{
+                    display: inline-block;
+                    float: right;
+                }
+            }
+        }
+        .NC{
+            height: 256px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            @include responsive(big-phone-screen){height: 240px;}
+            @include responsive(small-phone-screen){height: 270px;}
+            .SN{
+                margin-bottom: 30px;
+                .type{
+                    display: table-cell;
+                    vertical-align: middle;
+                    width: 12%;
+                    border-right: 1px solid $maincolor1;
+                    @include responsive(big-phone-screen){width: 15%;}
+                    @include responsive(small-phone-screen){width: 17%;}
+                    span{
+                        display: inline-block;
+                        width: 46px;
+                        text-transform: uppercase;
+                        background-color: $maincolor2;
+                        padding: 3px 0;
+                        text-align: center;
+                        color: $maincolor5;
+                        font-size: $fontsize8;
+                        @include responsive(big-phone-screen){font-size: $fontsize9;}
+                        @include responsive(medium-phone-screen){width: 37px;}
+                        @include responsive(small-phone-screen){width: 33px;}
+                    }
+                }
+                .content{
+                    display: table-cell;
+                    vertical-align: middle;
+                    width: 70%;
+                    padding: 0 10px 0 20px;
+                    @include responsive(big-phone-screen){width: 67%;}
+                    @include responsive(small-phone-screen){width: 65%;}
+                    p{
+                        margin-bottom: 0;
+                        a{
+                            text-decoration: none;
+                            color: $maincolor1;
+                            transition: all 0.3s ease-in-out;
+                            &:hover{color: $maincolor2;}
+                        }
+                    }
+                    .date{
+                        font-size: $fontsize7;
+                        color: $graycolor3;
+                        text-transform: capitalize;
+                    }
+                }
+                .related{
+                    display: table-cell;
+                    width: 18%;
+                    div{
+                        width: 100%;
+                        img{@extend %normal-image-style;}
+                    }
+                }
+            }
+            &.more{
+                overflow-y: scroll;
+                &::-webkit-scrollbar {width: 4px;}/* the whole scrollbar width */
+                &::-webkit-scrollbar-track {background-color: $maincolor5;}/* the track that behind the scrollbar */
+                &::-webkit-scrollbar-thumb { /* that is the part that you grap with your mouse arrow */
+                  background-color: $maincolor1;
+                  outline: 1px solid $maincolor1;
+                }                 
+            }
+            
+        }
+        .N-btn{
+            display: inline-block;
+            text-transform: uppercase;
+            color: $maincolor2;
+            border: 1px solid $maincolor2;
+            background: none;
+            padding: 3px 6px;
+            transition: all 0.3s ease-in-out;
+            &:hover{color: $subcolor2;border-color:$subcolor2;}
+            &.disappear{display: none;}
+        }
+        .RDG{
+            .image{
+                width: 49%;
+                margin-bottom: 1.5%;
+                display: inline-block;
+                a{
+                    text-decoration: none;
+                   img{@extend %normal-image-style;} 
+                }
+                
+                &:nth-child(odd){margin-right: 0.5%;}
+                &:nth-child(even){margin-left: 0.5%;}
+            }
+        }
+    }
+}/* end profile-overview */
+
+/* start activity log */
+.A-log{
+    @extend .ph;
+    .form{
+        .form-group{
+            .myinput{
+                width: 50%;
+                float: left;
+                padding: 5px 6px;
+                background: none;
+                border: 1px solid $maincolor2;
+                border-right: 0;
+                color: $maincolor1;
+                @include responsive(medium-phone-screen){width: 70%;}                        
+            }
+            @include placeholderColor($maincolor1);
+            button.search-go{
+                width: 10%;
+                padding: 5px 6px;
+                background-color: $maincolor2;
+                color: $maincolor5;
+                font-size: $fontsize6;
+                text-transform: uppercase;
+                border: 1px solid $maincolor2;
+                border-left: 0;
+                transition: all 0.3s ease-in-out;
+                @include responsive(medium-screen){font-size: $fontsize7;}
+                @include responsive(medium-phone-screen){font-size: $fontsize7;width: 18%;}
+                &:hover{background-color: $subcolor2;}                        
+            }
+        }
+    }    
+    .log-content{
+        margin: 40px 0;
+        .single-A{
+            margin-bottom: 20px;
+            width: 100%;
+            .date-time{
+                display: table-cell;
+                width: 180px;
+                padding-right: 10px;
+                border-right: 1px solid $maincolor1;
+                @include responsive(big-phone-screen){width: 130px;}
+                @include responsive(small-phone-screen){width: 112px;}
+                span{
+                    display: block;
+                    font-size: $fontsize5;
+                    text-transform: capitalize;
+                    color: $maincolor1;
+                    i{color: $maincolor2;}
+                    &.date{color: $graycolor3;}
+                    @include responsive(medium-screen){font-size: $fontsize6;}
+                    @include responsive(big-phone-screen){font-size: $fontsize7;}
+                    @include responsive(medium-phone-screen){font-size: $fontsize7;}
+                }
+            }
+            .activity{
+                display: table-cell;
+                padding-left: 15px;
+                .activity-title{
+                    margin: 0 0 5px 0;
+                    text-transform: capitalize;
+                    a{
+                        text-decoration: none;
+                        color: $maincolor1;
+                        transition: all 0.3s ease-in-out;
+                        &:hover{color: $maincolor2;}
+                    }
+                }
+                .activity-type{color: $graycolor2;margin-bottom: 0;}
+            }
+        }        
+    }
+    .mybtn{
+        text-transform: uppercase;
+        background-color: $maincolor2;
+        padding: 8px 15px;
+        color: $maincolor5;
+        border: 0;
+        transition: all 0.3s ease-in-out;
+        &:hover{background-color: $maincolor1;}
+    }
+}/* end A-log */

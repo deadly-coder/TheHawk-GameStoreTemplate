@@ -1,0 +1,420 @@
+@import 'main-style';
+
+.blog{
+    position: relative;
+    /* blog list */
+    .post{
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        .image{
+            position: relative;
+            width: 100%;
+            margin-bottom: 30px;
+            @include responsive(medium-screen){margin-bottom: 15px;}
+            @include responsive(big-phone-screen){margin-bottom: 10px;}
+            img{@extend %normal-image-style;}
+            .overlay{
+                @extend %overlayBlueFade;
+                @extend %center-the-items-inside-me;
+                h3{
+                    text-transform: capitalize;
+                    text-align: center;
+                    margin-top: 10px;
+                    @include responsive(medium-phone-screen){margin-bottom: 8px;}
+                    a{
+                        display: block;
+                        color: $maincolor5;
+                        text-decoration: none;
+                        background-color: $overlaycolorblack;
+                        padding: 10px;
+                        border-bottom: 1px solid $maincolor2;
+                        transition: all 0.3s ease-in-out;
+                        &:hover{color: $maincolor2;}
+                    }                    
+                }/* end h3 */
+            }/* end overlay */
+            /* post date */ 
+            .D{
+                position: absolute;
+                bottom: 22%;
+                padding-left: 40px;
+                @include responsive(tablet-screen){bottom: 22%;}
+                @include responsive(big-phone-screen){display: none;}
+                .date{
+                    color: $maincolor4;
+                    text-transform: capitalize;
+                    font-size: $fontsize7;
+                    @include responsive(big-phone-screen){font-size: $fontsize8;}
+                }
+            }/* end D */
+            /* post tags and comments number */
+            .TC{
+                position: absolute;
+                bottom: 10%;
+                width: 100%;
+                @include responsive(big-phone-screen){display: none;}
+                /* tags */
+                .T{
+                    list-style: none;
+                    float: left;
+                    padding-left: 40px;
+                    li{
+                        float: left;
+                        a{
+                            display: block;
+                            padding: 5px 10px;
+                            text-decoration: none;
+                            background-color: $overlaycolorblack;
+                            margin-right: 4px;
+                            color: $maincolor5;
+                            text-transform: uppercase;
+                            font-size: $fontsize7; 
+                            transition: all 0.3s ease-in-out;
+                            &:hover{background-color: $overlaycolorshade;}                            
+                        }
+                    }
+                }
+                /* comments number */
+                .C{
+                    float: right;
+                    margin-right: 40px;
+                    span{
+                        font-size: $fontsize7;
+                        a{
+                            text-decoration: none;
+                            color: $maincolor4;
+                            transition: all 0.3s ease-in-out;
+                            &:hover{color: $maincolor2;}
+                        }
+                    }
+                }
+            }/* end TC */                
+            
+        }/* end image */
+        .info{
+            position: relative;
+            .TDC{
+                display: none;
+                @include responsive(big-phone-screen){display: block;}
+                /* date */
+                .D{
+                    margin-bottom: 5px;
+                    .date{
+                        color: $maincolor2;
+                        text-transform: capitalize;
+                        font-size: $fontsize7;
+                        @include responsive(big-phone-screen){font-size: $fontsize8;}
+                    }
+                }
+                /* post tags and comments numbers */
+                .TC{
+                    margin-bottom: 15px;
+                    /* tags */
+                    .T{
+                        li{
+                            display: inline-block;
+                            margin: 0 4px 5px 0;
+                            a{
+                                display: block;
+                                text-decoration: none;
+                                padding: 5px 10px;
+                                background-color: $maincolor2;
+                                color: $maincolor5;
+                                text-transform: uppercase;
+                                font-size: $fontsize7; 
+                                transition: all 0.3s ease-in-out;
+                                &:hover{background-color: $subcolor1;}
+                                @include responsive(big-phone-screen){font-size: $fontsize8;}
+                            }
+                        }
+                    }
+                    /* comments number */
+                    .C{
+                        span{
+                            font-size: $fontsize7;
+                            a{
+                                text-decoration: none;
+                                color: $maincolor1;
+                                transition: all 0.3s ease-in-out;
+                                &:hover{color: $maincolor2;}
+                            }
+                        }
+                    }
+                }/* end TC */              
+            }/* end TDC */
+            p{
+                color: $graycolor2;
+                margin-bottom: 20px;
+            }
+            .author{
+                text-transform: uppercase;
+                font-size: $fontsize7;
+                letter-spacing: 0.1px;
+                @include responsive(big-phone-screen){font-size: $fontsize8;}
+                a{
+                    display: inline-block;
+                    color: $maincolor5;     
+                    background-color: $maincolor1;
+                    padding: 10px 12px;
+                }
+            }/* end author */
+        }/* end info */
+    }/* end post */
+    
+
+    /* sidebar */
+    .sidebar{
+        position: relative;
+        padding-top: 10px;
+        /* advertisement */
+        .adv{
+            cursor: pointer;
+            padding: 40px;
+            text-align: center;
+            background-color: $graycolor1;
+            color: $graycolor3;
+            border: 4px solid $maincolor4;
+            @include responsive(medium-screen){padding: 30px;}
+            @include responsive(big-phone-screen){padding: 40px;}
+            @include responsive(medium-phone-screen){padding: 40px;}
+            i{
+                color: $maincolor2;
+                margin-right: 3px;
+            }
+        }/* end adv */
+        
+        /* blog search */
+        .blog-search{
+            margin-top: 7px;
+            .form{
+                input{
+                    width: 90%;
+                    float: left;
+                    padding: 6px 8px;
+                    color: $maincolor1;
+                    border: 1px solid $maincolor2;
+                    border-right: 0;
+                    outline: 0;
+                    @include responsive(small-phone-screen){width: 80%;}
+                }
+                .blog-btn{
+                    width: 10%;
+                    padding: 6px 8px;
+                    font-size: $fontsize6;
+                    text-transform: uppercase;
+                    border: 1px solid $maincolor2;
+                    border-left: 0;
+                    background-color: $maincolor2;
+                    color: $maincolor5;
+                    outline: 0;
+                    transition: all 0.2s ease-in-out;
+                    @include responsive(big-phone-screen){font-size: $fontsize7;}
+                    @include responsive(small-phone-screen){width: 20%;}
+                    &:hover{background-color: $subcolor2;}
+                }/* end blog-btn */
+            }/* end form */
+        }/* end blog-search */
+        /* get notification */
+        .get-notif{
+            @extend %global-sections-css2;
+            padding: 60px 25px;
+            margin-top: 20px;
+            text-align: center;
+            background-image: url('../images/blog/get-notif-image.jpg');
+            background-size: cover;
+            background-position: center;
+            image-rendering: -webkit-optimize-contrast;
+            .overlay{@extend %overlayBlue;}
+            .content{
+                position: relative;
+                h4{
+                    color: $maincolor4;
+                    text-transform: capitalize;
+                    margin-bottom: 15px;
+                }
+                .notif-form-content{
+                    form{
+                        width: 100%;
+                        input{
+                            width: 80%;
+                            float: left;
+                            padding: 7px 6px;
+                            background: none;
+                            border: 1px solid $overlaycolor2;
+                            border-right: 0;
+                            outline: 0;
+                            color: $maincolor4;
+                            @include responsive(medium-screen){font-size: $fontsize7;}
+                            @include responsive(medium-phone-screen){font-size: $fontsize7;}
+                        }
+                        @include placeholderColor($maincolor5);
+                        .notif-btn{
+                            width: 20%;
+                            padding: 7px 6px;
+                            background-color: $maincolor2;
+                            color: $maincolor5;
+                            font-size: $fontsize6;
+                            border: 1px solid $maincolor2;
+                            border-left-color: transparent;
+                            transition: all 0.3s ease-in-out;
+                            @include responsive(medium-screen){font-size: $fontsize7;}
+                            @include responsive(big-phone-screen){font-size: $fontsize7;}
+                            &:hover{background-color: $maincolor1;border-left-color: $maincolor2;}
+                        }/* end notif-btn */                       
+                    }/* end form */
+
+                }/* end notif-form-content */
+            }/* end content */
+        }/* end get-notif */
+        /* popular games */
+        .popular{
+            @extend %global-sections-css3;
+            h4{@extend %sidebar-header;}
+            .pop-list{
+                position: relative;
+                ul{
+                    li.pop{
+                        margin-bottom: 30px;
+                        @include responsive(medium-screen){margin-bottom: 10px;}
+                        @include responsive(big-phone-screen){margin-bottom: 15px;}
+                        @include responsive(medium-phone-screen){margin-bottom: 10px;}
+                        .image-outer{
+                            display: table-cell;
+                            @include responsive(small-phone-screen){display: block;}
+                            .image{
+                                position: relative;
+                                width: 190px;
+                                overflow: hidden;
+                                transition: all 0.3s ease-in-out;
+                                @include responsive(medium-screen){width: 170px;}
+                                @include responsive(tablet-screen){width: 160px;}
+                                @include responsive(big-phone-screen){width: 160px;}
+                                @include responsive(medium-phone-screen){width: 140px;}
+                                @include responsive(small-phone-screen){width: 100%;margin-bottom: 15px;}
+                                .overlay{
+                                    @extend %overlayOrangeFade;
+                                    @extend %center-the-items-inside-me;
+                                    span{
+                                        display: inline-block;
+                                        text-transform: uppercase;
+                                        color: $maincolor4;
+                                        background-color: $overlaycolorblack;
+                                        font-size: $fontsize5;
+                                        padding: 3px 10px;
+                                        transition: all 0.3s ease-in-out; 
+                                    }  
+                                    &:hover{
+                                        span{color: $maincolor2;}
+                                    }
+                                }/* end overlay */
+                                img{@extend %normal-image-style;}
+                            }/* end image */                   
+                        }/* end image-outer */
+                        .info{
+                            display: table-cell;
+                            vertical-align: top;
+                            padding-left: 15px;
+                            @include responsive(small-phone-screen){display: block;padding: 0;}
+                            h5{
+                                text-transform: uppercase;
+                                margin: 0 0 8px 0;
+                                border-top: 1px solid $maincolor2;
+                                border-bottom: 1px solid $maincolor2;
+                                a{
+                                    display: block;
+                                    padding: 5px 0;
+                                    color: $maincolor1;
+                                    text-decoration: none;
+                                    transition: all 0.2s ease-in-out;
+                                    &:hover{color: $maincolor2;}
+                                    @include responsive(small-phone-screen){padding: 10px 0;}
+                                }
+                            }/* end h5 */
+                            .date{
+                                font-size: $fontsize7;
+                                color: $maincolor2;
+                                text-transform: capitalize;
+                                @include responsive(big-phone-screen){font-size: $fontsize8}
+                            }
+                            p{
+                                color: $maincolor1;
+                                line-height: 23px;
+                            }
+                        }/* end info */                    
+                    }/* end li.pop */                    
+                }
+
+            }/* end pop-list */
+        }/* end popular */        
+        /* recent posts */
+        .recent-posts{
+            @extend %global-sections-css3;
+            h4{@extend %sidebar-header;}
+            ul{
+                list-style: none;
+                padding: 0;
+                li{
+                    text-transform: capitalize;
+                    font-size: $fontsize6;
+                    padding: 10px 0;
+                    border-bottom: 1px solid $maincolor2;
+                    color: $maincolor2;
+                    @include responsive(medium-screen){font-size: $fontsize7;}
+                    @include responsive(big-phone-screen){font-size: $fontsize7;}
+                    a{
+                        text-decoration: none;
+                        color: $maincolor1;
+                        padding-left: 5px;
+                        transition: all 0.2s ease-in-out;
+                        &:hover{
+                            color: $maincolor2;
+                        }
+                    }
+                }/* end li */
+                li::before{
+                    content: "\f35a";
+                    font-weight: 900;
+                    font-family: "Font Awesome 5 Free";
+                }
+            }/* end ul */
+        }/* end recent-posts */
+        /* best users */
+        .best-users{
+            @extend %global-sections-css2;
+            border-bottom: 1px solid $graycolor1;
+            h4{@extend %sidebar-header;}
+            ul{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                li.user{
+                    display: inline;
+                    margin-right: 15px;
+                    a{              
+                        img{
+                            width: 60px;
+                            border-radius: 50%;
+                            image-rendering: -webkit-optimize-contrast;
+                            @include responsive(medium-screen){width: 60px;}
+                            @include responsive(small-phone-screen){width: 55px;}
+                        }
+                    }/* end a */
+                }/* end li.user */                
+            }/* end ul */
+        }/* end best-users */
+    }/* end sidebar */
+}/* end blog */
+
+%sidebar-header{
+    text-transform: uppercase;
+    color: $maincolor1;
+    margin-bottom: 20px;
+    line-height: 36px;
+    span{
+        color: $maincolor2;
+        border-bottom: 1px solid $maincolor2;
+    }
+}
+
+.pn{@include responsive(big-phone-screen){text-align: center;}}

@@ -1,0 +1,34 @@
+@import 'main-style';
+
+.content{
+    @extend %global-sections-css;
+    text-align: center;
+    h4{
+        text-transform: capitalize;
+        color: $maincolor1;
+    }
+    h1{
+        color: $maincolor2;
+        margin: 50px 0;
+        span{
+            letter-spacing: 6px;
+            font-size: 150px;
+            padding: 0 100px;
+            border-top: 5px solid $maincolor2;
+            border-bottom: 5px solid $maincolor2;
+            @include responsive(big-phone-screen){font-size: 100px;}
+            @include responsive(small-phone-screen){font-size: 50px;}
+        }
+    }
+    a{
+        text-decoration: none;
+        color: $maincolor2;
+        font-size: $fontsize1;
+        text-transform: uppercase;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            color: $subcolor2;
+        }
+        @include responsive(big-phone-screen){font-size: $fontsize3;}
+    }
+}

@@ -1,0 +1,68 @@
+@import 'main-style';
+
+/* start faq */
+.faq{
+    .heading{
+        @include heading-with-background(faq-background, 70px 0);
+    }/* end heading */
+    .faq-content{
+        margin: 10px 0;
+        .panel-group{
+            .panel{
+                border: 0;
+                box-shadow: none;
+                .panel-heading{
+                    background: $maincolor1;
+                    border-radius: 0;
+                    padding-left: 15px;
+                    .header{
+                        a{
+                            text-decoration: none;
+                            color: $maincolor2;
+                            text-transform: capitalize;
+                            span{
+                                color: $maincolor4;
+                                border-bottom: 1px solid $maincolor2;
+                            }
+                        }
+                        a::before{
+                            content: "\f358";
+                            font-family: "Font Awesome 5 Free";
+                            margin-right: 5px;
+                        }
+                        a.collapsed::before{
+                            content: "\f35a";
+                        }
+                    }/* header */                    
+                }/* panel-heading */
+                .panel-collapse{
+                    .body{
+                        padding: 15px;
+                        p{
+                            color: $graycolor2;
+                            line-height: 1.6;
+                        }
+                    }
+                }
+            }/* panel */
+        }/* panel-group */
+        .contact-us-btn{
+            text-align: center;
+            margin: 50px 0;
+            a{
+                text-transform: uppercase;
+                text-decoration: none;
+                font-size: $fontsize5;
+                color: $maincolor2;
+                border: 1px solid $maincolor2;
+                padding: 7px 25px;
+                transition: all 0.3s ease-in-out;
+                &:hover{
+                    background-color: $maincolor2;
+                    color: $maincolor4;
+                }
+            }
+        }
+    }/* faq-content */
+}
+/* end faq */

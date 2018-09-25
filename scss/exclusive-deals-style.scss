@@ -1,0 +1,346 @@
+@import 'main-style';
+
+/* start heading */
+.heading{
+    .heading-inner{
+        @include heading-with-background(exclusive-deals/exclusive-deals-heading-background, 70px);
+        .overlay{@extend %overlayBlue;}
+    }/* end heading-inner */
+}
+/* end heading */
+
+/* start ex-deals */
+.ex-deals{
+    position: relative;
+    .mygames{
+        position: relative;
+        margin: 0;
+        .game{
+            position: relative;
+            .image{
+                position: relative;
+                width: 100%;
+                .offer-percent{
+                    position: absolute;
+                    right: 6px;
+                    top: 5px;
+                    font-size: $fontsize6;
+                    color: $maincolor4;
+                    background-color: $overlaycolorshade;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    border-radius: 50%;
+                    text-align: center;
+                }
+                a{
+                    text-decoration: none;
+                    img{@extend %normal-image-style;}
+                }
+                .price-bar{
+                    position: absolute;
+                    bottom: 0;
+                    padding: 5px 0;
+                    width: 100%;
+                    @extend %center-the-items-inside-me;
+                    background-color: $overlaycolor1;
+                    color: $maincolor4;
+                    font-size: $fontsize6;
+                    span{margin-right: 5px;}
+                    del{color: $maincolor2;font-weight: 600;}
+                }
+            }/* end image */
+            .info{
+                h5{
+                    text-transform: capitalize;
+                    a{
+                        text-decoration: none;
+                        color: $maincolor1;
+                    }
+                }
+            }/* end info */
+        }/* end game */
+    }/* end mygames */   
+}
+/* end ex-deals */
+
+
+/* start ex-big */
+.ex-day{
+    @extend %global-sections-css2;
+    .head{@extend %head;}
+    .row{
+        margin: 20px 0;
+        .ex-game{
+            padding-left: 0;
+            margin-bottom: 30px;
+            @include responsive(big-phone-screen){padding-right: 0;}
+            .image{
+                position: relative;
+                width: 100%;
+                .overlay{
+                    @extend %overlayBlue;
+                    border-right: 2px solid $maincolor2;
+                    padding: 40px 0; 
+                    h4{
+                        text-align: center;
+                        text-transform: uppercase;
+                        color: $maincolor2;
+                        span{
+                            margin-right: 5px;
+                            color: $maincolor4;
+                        }
+                        &:nth-child(2){
+                            color: $maincolor4;
+                            margin: 20px 0;
+                            span{
+                                border: 1px solid $maincolor4;
+                                padding: 10px 20px;
+                            }
+                        }
+                    }/* end h4 */
+
+                    .ex-game-btns{
+                        position: absolute;
+                        right: 10px;
+                        bottom: 5px;
+                        a{
+                            display: block;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            color: $maincolor2;
+                            padding: 7px 0;
+                            font-size: $fontsize4;
+                            transition: all 0.3s ease-in-out;
+                            i{margin-left: 5px;}
+                            &:hover{
+                                color: $maincolor4;
+                                border-color: $maincolor4;
+                            }                        
+                        }/* end a */                       
+                    }/* end ex-game-btns */ 
+                }/* end overlay */
+                img{@extend %normal-image-style;}
+                .offer-per{
+                    position: absolute;
+                    top: -36px;
+                    right: -30px;
+                    @include responsive(big-phone-screen){
+                        top: -30px;
+                        right: -6px;
+                    }
+                    h4{
+                        width: 80px;
+                        height: 80px;
+                        @extend %center-the-items-inside-me;
+                        background-color: $maincolor2;
+                        color: $maincolor4;
+                        border-radius: 50%;
+                        transform: rotate(30deg);
+                        -webkit-transform: rotate(30deg);
+                        -moz-transform: rotate(30deg);
+                        -ms-transform: rotate(30deg);
+                        box-shadow: 1px 1px 1px #222;
+                        -webkit-box-shadow: 1px 1px 1px #222;
+                        -moz-box-shadow: 1px 1px 1px #222;
+                        -ms-box-shadow: 1px 1px 1px #222;
+                        @include responsive(big-phone-screen){width: 60px;height: 60px;}
+                    }
+                }/* end offer-per */
+            }/* end image */
+        }/* end ex-game */
+        .offer-deadline{
+            text-align: center;
+            h4{
+                text-transform: uppercase;
+                color: $maincolor1;
+                span{
+                    color: $maincolor2;
+                    border-bottom: 1px solid $maincolor2;
+                }
+            }
+            .countdown{
+                margin: 20px 0;
+                .countdown-number{
+                    .demo{
+                        text-transform: uppercase;
+                        color: $maincolor1;
+                        h5{margin-bottom: 30px;}
+                        span{
+                            display: block;
+                            padding: 10px 30px;
+                            border: 1px solid $maincolor2;
+                            font-size: $fontsize2;
+                            @include responsive(medium-screen){font-size: $fontsize3;}
+                            @include responsive(big-phone-screen){font-size: $fontsize5;}
+                            @include responsive(medium-phone-screen){padding: 10px 23px;}
+                            @include responsive(big-phone-screen){padding: 7px 16px;}
+                        }
+                    }/* end demo */
+                }/* end countdown-number */
+            }/* end countdown */
+        }/* end offer-deadline */
+    }/* end row */
+}
+/* end ex-big */
+
+/* start ex-week */
+.ex-week{
+    @extend %global-sections-css2;
+    .head{@extend %head;}
+    .ex-week-content{
+        margin: 20px 0;
+        .ex-week-game{
+            margin-bottom: 15px;
+            .image{
+                width: 100%;
+                position: relative;
+                width: 100%;
+                .offer-percent{
+                    position: absolute;
+                    right: 6px;
+                    top: 5px;
+                    font-size: $fontsize6;
+                    color: $maincolor4;
+                    background-color: $maincolor2;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    border-radius: 50%;
+                    text-align: center;
+                }
+                a{
+                    text-decoration: none;
+                    img{@extend %normal-image-style;}
+                }
+                .price-bar{
+                    position: absolute;
+                    bottom: 0;
+                    padding: 5px 0;
+                    width: 100%;
+                    @extend %center-the-items-inside-me;
+                    background-color: $overlaycolor2;
+                    color: $maincolor4;
+                    font-size: $fontsize6;
+                    span{margin-right: 5px;}
+                    del{color: $maincolor1;font-weight: 600;}
+                }
+            }/* end image */ 
+            .info{
+                h5{
+                    text-transform: capitalize;
+                    a{
+                        text-decoration: none;
+                        color: $maincolor1;
+                    }
+                }
+            }/* end info */
+        }/* end ex-week-game */
+    }/* end ex-week-content */
+}
+/* end ex-week */
+
+/* start franchise-offer */
+.franchise-offer{
+    @extend %global-sections-css2;
+    .head{@extend %head;}
+    .franchise-content{
+        margin: 20px 0;
+        ul.images{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            li.image{
+                margin: 0 15px;
+                display: inline-block;
+                @include responsive(medium-screen){width: 100px;}
+                @include responsive(tablet-screen){width: 100px;}
+                @include responsive(big-phone-screen){width: 66px}
+                @include responsive(medium-phone-screen){width: 64px}
+                img{@extend %normal-image-style;}
+            }
+        }/* end images */
+        .info{
+            margin: 30px 0;
+            a{
+                text-decoration: none;
+                color: $maincolor1;
+                transition: all 0.3s ease-in-out;
+                h5{
+                    text-transform: uppercase;
+                    text-align: center;
+                    border-top: 1px solid $maincolor2;
+                    border-bottom: 1px solid $maincolor2;
+                    padding: 10px 0;
+                    letter-spacing: 0.4px;
+                    span{color: $maincolor2;}
+                }
+            }
+        }/* end info */
+    }/* end franchise-content */
+}
+/* end franchise-offer */
+
+/* start more links */
+.M-L{
+    @extend %global-sections-css2;
+    .row{
+        .link-box{
+            a{
+                display: block;
+                position: relative;
+                height: 125px;
+                text-decoration: none;
+                border: 1px solid $maincolor1;
+                margin: 15px 0;
+                padding-top: 29px;
+                transition: all 0.3s ease-in-out;
+                @include responsive(medium-screen){padding-top: 34px;}
+                &:hover{border-color: $maincolor2;}
+                span{
+                    display: block;
+                    font-size: $fontsize3;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: $maincolor1;
+                    @include responsive(medium-screen){font-size: $fontsize4;}
+                    @include responsive(big-phone-screen){font-size: $fontsize4;}
+                    @include responsive(medium-phone-screen){font-size: $fontsize5;}
+                    .highlight{
+                        display: inline-block;
+                        color: $maincolor2;
+                    }
+                    &:nth-child(2){
+                        font-size: $fontsize5;
+                        @include responsive(medium-screen){font-size: $fontsize6;}
+                        @include responsive(big-phone-screen){font-size: $fontsize6;}
+                        @include responsive(medium-phone-screen){font-size: $fontsize7;}
+                    }
+                }/* end span */
+            }/* end a */
+        }/* end link-box */
+    }/* end row */
+}
+/* end more links */
+
+
+%head{
+    border-top: 1px solid $maincolor2;
+    border-bottom: 1px solid $maincolor2;
+    padding: 4px 0;
+    text-align: center;
+    margin-bottom: 60px;
+    h4{
+        text-transform: uppercase;
+        color: $maincolor1;
+        @include responsive(big-phone-screen){text-align: center;}
+        span{
+            display: inline-block;
+            background-color: $maincolor2;
+            padding: 4px 10px;
+            color: $maincolor5;
+            @include responsive(medium-screen){padding: 3px 8px;}
+        }
+    }
+}

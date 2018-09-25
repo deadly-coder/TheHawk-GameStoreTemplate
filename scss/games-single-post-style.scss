@@ -1,0 +1,69 @@
+@import 'main-style';
+
+/* start content and info */
+.cni{
+    @extend %global-sections-css3;
+    .info{
+        margin-bottom: 45px;
+        .adv{
+            background-color: $graycolor1;
+            border: 3px solid $maincolor4;
+            text-align: center;
+            padding: 100px 0;
+            margin: 0 0 25px 0;
+            h5{color:$maincolor1;text-transform: none;}
+        }/* end adv */        
+        h4{
+            margin: 0;
+            text-transform: uppercase;
+            color: $maincolor2;
+            text-align: center;
+            background-color: $maincolor1;
+            padding: 15.5px 0;
+        }
+        .important{
+            h5{
+                text-transform: uppercase;
+                color: $maincolor1;
+                text-align: left;
+                margin-bottom: 10px;
+                span{
+                    color: $maincolor2;
+                    border-bottom: 1px solid $maincolor2;
+                }
+            }
+            p{
+                color: $maincolor1;
+                text-transform: capitalize;
+                span{
+                    text-transform: uppercase;
+                    margin-right: 10px;
+                    color: $maincolor2;
+                }
+            }            
+        }/* end important */
+        
+    }/* end info */
+    .content{
+        .game-head{
+            @include heading-with-background(games/game-head, 70px);
+        }/* end game-head */
+        p{
+            color: $graycolor2;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .video{
+            position: relative;
+            cursor: pointer;
+            height: 422px;
+            margin: 15px 0 30px 0;
+            @include responsive(medium-screen){height: 347px;}
+            @include responsive(tablet-screen){height: 405px;}
+            @include responsive(big-phone-screen){height: 222px;}
+            @include responsive(medium-phone-screen){height: 194px;}
+            @include responsive(small-phone-screen){height: 163px;}           
+        }/* end video */
+    }/* end content */
+}/* end cni */
+
