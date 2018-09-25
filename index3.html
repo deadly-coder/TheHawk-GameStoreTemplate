@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8">
+        <!-- IE Compatibility META [internet explorer compatibility] -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- FIRST MOBILE META -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- here is the title of the website which appear in the window tab -->
+        <title>The Hawk: Game Store Theme</title>  
+		<!-- here is css files require to style the website -->
+        <link rel="stylesheet" href="css/bootstrap.css" > <!-- the css file that belong to the bootstrap -->
+        <link rel="stylesheet" href="css/fontawesome-all.min.css" > <!-- the css file of the font awesome plugin so we can use awesome shapes made by font -->	
+        <link rel="stylesheet" href="css/page-coded-soon.css">
+	</head>
+    <body>
+		<!-- start the header -->
+		<header class="home-header">
+			<div class="container">
+				<div class="user-spans col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					
+					<div class="user-login">
+						<a  href="#myModal" data-toggle="modal">login <i class="fas fa-sign-in-alt"></i></a>
+					</div>
+					
+					<form class="search">
+						<div class="form-group">
+							<input type="text" class="myinput" placeholder="Search for games, blogs, news and reviews">
+						    <span><i class="fas fa-search"></i></span>
+                        </div>
+					</form>
+                    
+                    <!-- start login in and register form modal that appear after click on the login link -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="content">
+                                    <div class="overlay"></div>
+                                    <!-- form nav -->
+                                    <div class="form-nav">
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li role="presentation" class="active"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">log in</a></li>
+                                            <li role="presentation"><a href="#register" aria-controls="register" role="tab" data-toggle="tab">register</a></li>
+                                        </ul>                                        
+                                    </div><!-- end form-nav -->
+                                    <!-- form content -->
+                                    <div class="tab-content">
+                                        <form class="tab-pane fade in active form" id="login" role="tabpanel">
+                                            <div class="login-with">
+                                                <button class="cwf" type="button"><i class="fab fa-facebook-f"></i> connect with facebook</button>
+                                                <button class="cws" type="button"><i class="fab fa-steam-symbol"></i> connect with steam</button>
+                                                <button class="cwt" type="button"><i class="fab fa-twitch"></i> connect with twitch</button>                                                
+                                            </div><!-- end login-with -->
+                                            
+                                            <div class="divider">
+                                                <span>or</span>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <input type="text" class="myinput" name="username" placeholder="Username" />
+                                                <span><i class="fas fa-user-circle"></i></span>
+                                            </div><!-- end form-group -->
+                                            
+                                            <div class="form-group">
+                                                <input type="password" class="myinput" placeholder="Password" />
+                                                <span><i class="fas fa-lock"></i></span>
+                                            </div><!-- end form-group -->
+                                            
+                                            <div class="RM form-group"><!-- terms and conditions -->
+                                                <label>
+                                                    <input type="checkbox" value="true" name="remember-me">
+                                                    <small>remember me</small>
+                                                </label>    
+                                            </div>                                            
+                                            
+                                            <button type="submit" class="submit">log in</button>
+                                        </form><!-- end sign-in -->
+                                        
+                                        <form class="tab-pane fade form" id="register" role="tabpanel">
+                                            <div class="register-with">
+                                                <button class="cwf" type="button"><i class="fab fa-facebook-f"></i> register with facebook</button>
+                                                <button class="cws" type="button"><i class="fab fa-steam-symbol"></i> register with steam</button>
+                                                <button class="cwt" type="button"><i class="fab fa-twitch"></i> register with twitch</button>                                                
+                                            </div><!-- end register-with -->   
+                                            
+                                            <div class="divider">
+                                                <span>or</span>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <input type="text" class="myinput" name="username" placeholder="Username" />
+                                                <span><i class="fas fa-user-circle"></i></span>
+                                            </div><!-- end form-group -->                                            
+                                            
+                                            <div class="form-group">
+                                                <input type="email" class="myinput" name="email" placeholder="Email" />
+                                                <span><i class="far fa-envelope"></i></span>
+                                            </div><!-- end form-group -->  
+                                            
+                                            <div class="divider">
+                                                <span>security</span>
+                                            </div>                                            
+                                            
+                                            <div class="form-group">
+                                                <input type="password" class="myinput" placeholder="Password" />
+                                                <span><i class="fas fa-lock"></i></span>
+                                            </div><!-- end form-group -->
+                                            
+                                            <div class="form-group">
+                                                <input type="password" class="myinput" placeholder="Repeat Password" />
+                                                <span><i class="fas fa-lock"></i></span>
+                                            </div><!-- end form-group -->                                            
+                                            
+                                            <div class="divider">
+                                                <span>terms of services</span>
+                                            </div>
+                                            
+                                            <div class="TS form-group"><!-- terms and conditions -->
+                                                <label>
+                                                    <input type="checkbox" value="true" name="remember-me">
+                                                    <small>accept <a href="#">terms of sercives</a></small>
+                                                </label>    
+                                            </div>                                             
+                                            
+                                            <button type="submit" class="submit">register</button>
+                                        </form><!-- end sign-up -->
+                                        
+                                    </div><!-- end form-content -->
+                                </div><!-- end content -->
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">exit</button>
+                            </div><!-- end modal-content -->
+                        </div><!-- end modal-dialog -->
+                    </div><!-- end modal -->                     
+					
+				</div><!-- end user-spans -->
+				
+				<!-- title and the logo of the website -->
+				<div class="logo col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<span class="xline">-</span>
+					<img src="images/logo1.png" alt="Logo">
+					<h3>the <span>hawk</span> video games store</h3>
+					<span class="xline">-</span>
+				</div>
+				
+				<!-- nav links to other pages -->
+				<ul class="header-nav col-xs-12">
+                    
+					<li class="dropdown">
+                        <a class="dropdown-toggle" href="#" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            home
+                            <span class="caret"></span>
+                        </a>
+                        <ol class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="index.html">homepage version 1 - light content</a></li>
+                            <li><a href="index2.html">homepage version 2 - heavy content</a></li>
+                            <li><a href="index3.html">homepage version 3 - the ultimate</a></li>
+                        </ol>
+                    </li><!-- end dropdown -->
+                    
+					<li class="dropdown">
+                        <a class="dropdown-toggle" href="#" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            games
+                            <span class="caret"></span>
+                        </a>
+                        <ol class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="games-cards.html">games cards</a></li>
+                            <li><a href="games-list.html">games list</a></li>
+                            <li><a href="games-single-post.html">games single post</a></li>
+                            <li><a href="games-reviews-list.html">reviews list</a></li>
+                            <li><a href="games-review-post.html">games review post</a></li>
+                            <li><a href="games-pc-req.html">games pc requairements</a></li>
+                            <li><a href="games-purchase-page.html">games purchase page</a></li>
+                        </ol>                        
+                    </li><!-- end dropdown -->
+                    
+					<li><a href="best-sellers.html">best sellers</a></li>
+                    
+                    <li><a href="exclusive-deals.html">exclusive deals</a></li>
+                    
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            blog
+                            <span class="caret"></span>
+                        </a>
+                        <ol class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <li><a href="blog-small-sidebar.html">blog small sidebar</a></li>
+                            <li><a href="blog-large-sidebar.html">blog large sidebar</a></li>
+                            <li><a href="blog-full-width.html">blog full width</a></li>
+                            <li><a href="blog-page-single-post.html">blog single post image</a></li>
+                            <li><a href="blog-page-video-post.html">blog single post video</a></li>                            
+                        </ol>
+                    </li><!-- end dropdown -->
+                    
+					<li><a href="coming-soon.html">coming soon</a></li>                    
+                    
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            news room
+                            <span class="caret"></span>
+                        </a>
+                        <ol class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <li><a href="newsroom.html">newsroom main page</a></li>
+                            <li><a href="newsroom-all-search.html">newsroom full list</a></li>
+                            <li><a href="newsroom-news-post.html">newsroom post</a></li>
+                            <li><a href="newsroom-tags-page.html">newsroom tags page</a></li>
+                            <li><a href="newsroom-yearly-archives.html">newsroom yearly archives</a></li>
+                            <li><a href="newsroom-monthly-archives.html">newsroom monthly archives</a></li>                            
+                            <li><a href="newsroom-authors-page.html">newsroom authors page</a></li>                            
+                        </ol>
+                    </li><!-- end dropdown --> 
+                    
+					<li class="dropdown">
+                        <a class="dropdown-toggle" href="#" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            other pages
+                            <span class="caret"></span>
+                        </a>
+                        <ol class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="gallery.html">gallery</a></li>
+                            <li><a href="image-download-post.html">image downloading post</a></li>
+                            <li><a href="page-404.html">404 page</a></li>
+                            <li><a href="contact-us.html">contact us</a></li>
+                            <li><a href="details-payment-page.html">details and payment page</a></li>
+                            <li><a href="faq.html">faq</a></li>
+                            <li><a href="community.html">community</a></li>
+                            <li><a href="forums-list.html">forum</a></li>
+                            <li><a href="user-profile-overview-purchase-filled.html">user profile overview filled</a></li>
+                            <li><a href="user-profile-purchases-filled.html">user profile purchases filled</a></li>
+                            <li><a href="user-profile-wallet-filled.html">user profile wallet filled</a></li>
+                            <li><a href="order-confirmation-true.html">order confirmation true</a></li>
+                            <li><a href="order-confirmation-false.html">order confirmation false</a></li>
+                        </ol>                        
+                    </li><!-- end dropdown -->
+				</ul><!-- end header-nav -->
+                <!-- the button that belong to the navbar to make it appear in the phone screen -->
+				<a href="#" id="pull">menu</a>
+			</div>
+		</header>
+		<!-- end the header -->
+        
+        <!-- start will be released soon -->
+        <section class="WBRS">
+            <div class="container">
+                <p><span>will &nbsp be</span> &nbsp released &nbsp soon</p>
+            </div>
+        </section>
+        <!-- end will be released soon -->        
+        
+        <!-- start footer -->
+        <footer class="footer">
+            <!-- the top of the footer -->
+            <div class="top-footer">
+                <div class="container">
+                    <div class="row">
+                        <ul class="social col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <li><h4><span>follow</span> us:</h4></li>
+                            <li data-toggle="tooltip" data-placement="bottom" title="Facebook">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li data-toggle="tooltip" data-placement="bottom" title="Twitter">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li data-toggle="tooltip" data-placement="bottom" title="YouTube">
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </li>
+                            <li data-toggle="tooltip" data-placement="bottom" title="Twitch">
+                                <a href="#"><i class="fab fa-twitch"></i></a>
+                            </li>                            
+                            <li data-toggle="tooltip" data-placement="bottom" title="RSS">
+                                <a href="#"><i class="fas fa-rss"></i></a>
+                            </li>                                                    
+                        </ul>
+                        <div class="aboutus col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <h4><span>about</span> us</h4>
+                            <p>Curabitur a orci et nulla gravida laoreet. Pellentesque dictum ipsum nec placerat dignissim. Vivamus porta pellentesque libeadro, sit amet non.</p>
+                        </div>
+                    </div><!-- end row -->
+                </div><!-- end container -->
+            </div><!-- end of top-footer -->
+            
+            <!-- the main part of the footer -->
+            <div class="mid-footer">
+                <div class="overlay1"></div>
+                <div class="overlay2"></div>
+                <div class="container">
+                    <div class="row">
+                        
+                        <!-- popular posts part -->
+                        <div class="pop-posts col-lg-3 col-md-3 col-sm-7 col-xs-12">
+                            <h4><span>popular</span> posts</h4>
+                            <ul>
+                                <li><a href="blog-page-single-post.html">deadpool 2 coming in summer of 2018.</a></li>
+                                <li><a href="blog-page-single-post.html">captain america civil war was a great movie !</a></li>
+                                <li><a href="blog-page-single-post.html">star wars battle front 2 the new DLC details.</a></li>
+                                <li><a href="newsroom-news-post.html">Fallout 76 Beta Duo In October</a></li>
+                                <li><a href="newsroom-news-post.html">Fortnite In-Game Purchases Pass $1 Billion Mark</a></li>
+                            </ul>
+                        </div>
+                        <!-- recent links part -->
+                        <div class="recent-links col-lg-3 col-md-3 col-sm-5 col-xs-12">
+                            <h4><span>visited</span> links</h4>
+                            <ul>
+                                <li><a href="newsroom-news-post.html">Wall-Penetrating Sniper Rifle Rumoured To Be Coming To Fortnite</a></li>
+                                <li><a href="newsroom-news-post.html">Microsoft Rumoured To Be Preparing Streaming-Only Version Of Next Console.</a></li>
+                                <li><a href="newsroom-news-post.html">Rainbow Six Siege Moves To Ban Players Who Use Hate Speech.</a></li>
+                                <li><a href="newsroom-news-post.html">Blizzard Removes Upfront Fee For New World Of Warcraft Players.</a></li>
+                            </ul>
+                        </div>
+                        <!-- subscribe to our newsletter -->
+                        <div class="newsletter col-lg-3 col-md-3 col-sm-7 col-xs-12">
+                            <h4><span>news</span>letter</h4>
+                            <p>we will send you the good news only</p>
+                            <form class="newsletter-form">
+                                <div class="form-group">
+                                    <input type="text" class="myinput" placeholder="Email">
+                                    <button type="submit" class="newsletter-btn"><i class="fas fa-sign-in-alt"></i></button>                                    
+                                </div>
+                            </form>
+                            <h4><span>info</span>rmation</h4>
+                            <p>Developers seeking publishing <br> Publishers seeking retail partners <br> Streamer partner programme Affiliate programme</p>
+                            <h4><span>we</span> also accept</h4>
+                            <ul>
+                                <li><i class="fab fa-cc-paypal"></i></li>
+                                <li><i class="fab fa-cc-visa"></i></li>
+                                <li><i class="fab fa-cc-mastercard"></i></li>
+                                <li><i class="fab fa-cc-discover"></i></li>
+                                <li><i class="fab fa-cc-jcb"></i></li>
+                            </ul>
+                        </div>
+                        <!-- recent gallery -->
+                        <div class="some-gallery col-lg-3 col-md-3 col-sm-5 col-xs-12">
+                            <h4><span>our</span> gallery</h4>
+                            <div class="image">
+                                <a href="#"><img src="images/home/footer-image1.jpg" alt="image"></a>
+                            </div>
+                            <div class="image">
+                                <a href="#"><img src="images/home/footer-image2.jpg" alt="image"></a>
+                            </div>
+                            <div class="image">
+                                <a href="#"><img src="images/home/footer-image3.jpg" alt="image"></a>
+                            </div>
+                            <div class="image">
+                                <a href="#"><img src="images/home/footer-image4.jpg" alt="image"></a>
+                            </div>
+                            <p>we have such an amazing and astonishing wallpapers and images</p> 
+                            <p>check it <a href="gallery.html">now</a></p>
+                        </div>
+                        
+                    </div><!-- end row -->
+                </div><!-- end container -->
+            </div><!-- end mid-footer -->
+            
+            <div class="bot-footer">
+                <div class="container">
+                    <div class="copyright">
+                        <p>copyright 2017 &copy;. the hawk game store template </p>
+                    </div>
+                    <div class="madeby">
+                        <p>made by <span>DeadlyCoder</span></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end footer --> 
+        
+        <!-- the Javascript files -->
+        <script src="js/jquery-1.12.3.min.js"></script> <!-- the java script plugin that required to use jquery syntax -->
+        <script src="js/bootstrap.min.js"></script> <!-- the bootstrap java script minified file the required to use the bootstrap -->		
+        <script src="js/global-script.js"></script> <!-- the global script file needed for all the pages -->
+    </body>
+</html>          

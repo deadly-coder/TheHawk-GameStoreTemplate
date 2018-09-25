@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8">
+        <!-- IE Compatibility META [internet explorer compatibility] -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- FIRST MOBILE META -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- here is the title of the website which appear in the window tab -->
+        <title>The Hawk: Game Store Theme</title>  
+		<!-- here is css files require to style the website -->
+        <link rel="stylesheet" href="css/bootstrap.css" > <!-- the css file that belong to the bootstrap -->
+        <link rel="stylesheet" href="css/fontawesome-all.min.css" > <!-- the css file of the font awesome plugin so we can use awesome shapes made by font -->	
+	    <link rel="stylesheet" href="css/games-review-post-style.css">
+	</head>
+    <body>
+		<!-- start the header -->
+		<header class="home-header">
+			<div class="container">
+				<div class="user-spans col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					
+					<div class="user-login">
+						<a  href="#myModal" data-toggle="modal">login <i class="fas fa-sign-in-alt"></i></a>
+					</div>
+					
+					<form class="search">
+						<div class="form-group">
+							<input type="text" class="myinput" placeholder="Search for games, blogs, news and reviews">
+						    <span><i class="fas fa-search"></i></span>
+                        </div>
+					</form>
+                    
+                    <!-- start login in and register form modal that appear after click on the login link -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="content">
+                                    <div class="overlay"></div>
+                                    <!-- form nav -->
+                                    <div class="form-nav">
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li role="presentation" class="active"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">log in</a></li>
+                                            <li role="presentation"><a href="#register" aria-controls="register" role="tab" data-toggle="tab">register</a></li>
+                                        </ul>                                        
+                                    </div><!-- end form-nav -->
+                                    <!-- form content -->
+                                    <div class="tab-content">
+                                        <form class="tab-pane fade in active form" id="login" role="tabpanel">
+                                            <div class="login-with">
+                                                <button class="cwf" type="button"><i class="fab fa-facebook-f"></i> connect with facebook</button>
+                                                <button class="cws" type="button"><i class="fab fa-steam-symbol"></i> connect with steam</button>
+                                                <button class="cwt" type="button"><i class="fab fa-twitch"></i> connect with twitch</button>                                                
+                                            </div><!-- end login-with -->
+                                            
+                                            <div class="divider">
+                                                <span>or</span>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <input type="text" class="myinput" name="username" placeholder="Username" />
+                                                <span><i class="fas fa-user-circle"></i></span>
+                                            </div><!-- end form-group -->
+                                            
+                                            <div class="form-group">
+                                                <input type="password" class="myinput" placeholder="Password" />
+                                                <span><i class="fas fa-lock"></i></span>
+                                            </div><!-- end form-group -->
+                                            
+                                            <div class="RM form-group"><!-- terms and conditions -->
+                                                <label>
+                                                    <input type="checkbox" value="true" name="remember-me">
+                                                    <small>remember me</small>
+                                                </label>    
+                                            </div>                                            
+                                            
+                                            <button type="submit" class="submit">log in</button>
+                                        </form><!-- end sign-in -->
+                                        
+                                        <form class="tab-pane fade form" id="register" role="tabpanel">
+                                            <div class="register-with">
+                                                <button class="cwf" type="button"><i class="fab fa-facebook-f"></i> register with facebook</button>
+                                                <button class="cws" type="button"><i class="fab fa-steam-symbol"></i> register with steam</button>
+                                                <button class="cwt" type="button"><i class="fab fa-twitch"></i> register with twitch</button>                                                
+                                            </div><!-- end register-with -->   
+                                            
+                                            <div class="divider">
+                                                <span>or</span>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <input type="text" class="myinput" name="username" placeholder="Username" />
+                                                <span><i class="fas fa-user-circle"></i></span>
+                                            </div><!-- end form-group -->                                            
+                                            
+                                            <div class="form-group">
+                                                <input type="email" class="myinput" name="email" placeholder="Email" />
+                                                <span><i class="far fa-envelope"></i></span>
+                                            </div><!-- end form-group -->  
+                                            
+                                            <div class="divider">
+                                                <span>security</span>
+                                            </div>                                            
+                                            
+                                            <div class="form-group">
+                                                <input type="password" class="myinput" placeholder="Password" />
+                                                <span><i class="fas fa-lock"></i></span>
+                                            </div><!-- end form-group -->
+                                            
+                                            <div class="form-group">
+                                                <input type="password" class="myinput" placeholder="Repeat Password" />
+                                                <span><i class="fas fa-lock"></i></span>
+                                            </div><!-- end form-group -->                                            
+                                            
+                                            <div class="divider">
+                                                <span>terms of services</span>
+                                            </div>
+                                            
+                                            <div class="TS form-group"><!-- terms and conditions -->
+                                                <label>
+                                                    <input type="checkbox" value="true" name="remember-me">
+                                                    <small>accept <a href="#">terms of sercives</a></small>
+                                                </label>    
+                                            </div>                                             
+                                            
+                                            <button type="submit" class="submit">register</button>
+                                        </form><!-- end sign-up -->
+                                        
+                                    </div><!-- end form-content -->
+                                </div><!-- end content -->
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">exit</button>
+                            </div><!-- end modal-content -->
+                        </div><!-- end modal-dialog -->
+                    </div><!-- end modal -->                     
+					
+				</div><!-- end user-spans -->
+				
+				<!-- title and the logo of the website -->
+				<div class="logo col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<span class="xline">-</span>
+					<img src="images/logo1.png" alt="Logo">
+					<h3>the <span>hawk</span> video games store</h3>
+					<span class="xline">-</span>
+				</div>
+				
+				<!-- nav links to other pages -->
+				<ul class="header-nav col-xs-12">
+                    
+					<li class="dropdown">
+                        <a class="dropdown-toggle" href="#" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            home
+                            <span class="caret"></span>
+                        </a>
+                        <ol class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="index.html">homepage version 1 - light content</a></li>
+                            <li><a href="index2.html">homepage version 2 - heavy content</a></li>
+                            <li><a href="index3.html">homepage version 3 - the ultimate</a></li>
+                        </ol>
+                    </li><!-- end dropdown -->
+                    
+					<li class="dropdown">
+                        <a class="dropdown-toggle" href="#" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            games
+                            <span class="caret"></span>
+                        </a>
+                        <ol class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="games-cards.html">games cards</a></li>
+                            <li><a href="games-list.html">games list</a></li>
+                            <li><a href="games-single-post.html">games single post</a></li>
+                            <li><a href="games-reviews-list.html">reviews list</a></li>
+                            <li><a href="games-review-post.html">games review post</a></li>
+                            <li><a href="games-pc-req.html">games pc requairements</a></li>
+                            <li><a href="games-purchase-page.html">games purchase page</a></li>
+                        </ol>                        
+                    </li><!-- end dropdown -->
+                    
+					<li><a href="best-sellers.html">best sellers</a></li>
+                    
+                    <li><a href="exclusive-deals.html">exclusive deals</a></li>
+                    
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            blog
+                            <span class="caret"></span>
+                        </a>
+                        <ol class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <li><a href="blog-small-sidebar.html">blog small sidebar</a></li>
+                            <li><a href="blog-large-sidebar.html">blog large sidebar</a></li>
+                            <li><a href="blog-full-width.html">blog full width</a></li>
+                            <li><a href="blog-page-single-post.html">blog single post image</a></li>
+                            <li><a href="blog-page-video-post.html">blog single post video</a></li>                            
+                        </ol>
+                    </li><!-- end dropdown -->
+                    
+					<li><a href="coming-soon.html">coming soon</a></li>                    
+                    
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            news room
+                            <span class="caret"></span>
+                        </a>
+                        <ol class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <li><a href="newsroom.html">newsroom main page</a></li>
+                            <li><a href="newsroom-all-search.html">newsroom full list</a></li>
+                            <li><a href="newsroom-news-post.html">newsroom post</a></li>
+                            <li><a href="newsroom-tags-page.html">newsroom tags page</a></li>
+                            <li><a href="newsroom-yearly-archives.html">newsroom yearly archives</a></li>
+                            <li><a href="newsroom-monthly-archives.html">newsroom monthly archives</a></li>                            
+                            <li><a href="newsroom-authors-page.html">newsroom authors page</a></li>                            
+                        </ol>
+                    </li><!-- end dropdown --> 
+                    
+					<li class="dropdown">
+                        <a class="dropdown-toggle" href="#" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            other pages
+                            <span class="caret"></span>
+                        </a>
+                        <ol class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="gallery.html">gallery</a></li>
+                            <li><a href="image-download-post.html">image downloading post</a></li>
+                            <li><a href="page-404.html">404 page</a></li>
+                            <li><a href="contact-us.html">contact us</a></li>
+                            <li><a href="details-payment-page.html">details and payment page</a></li>
+                            <li><a href="faq.html">faq</a></li>
+                            <li><a href="community.html">community</a></li>
+                            <li><a href="forums-list.html">forum</a></li>
+                            <li><a href="user-profile-overview-purchase-filled.html">user profile overview filled</a></li>
+                            <li><a href="user-profile-purchases-filled.html">user profile purchases filled</a></li>
+                            <li><a href="user-profile-wallet-filled.html">user profile wallet filled</a></li>
+                            <li><a href="order-confirmation-true.html">order confirmation true</a></li>
+                            <li><a href="order-confirmation-false.html">order confirmation false</a></li>
+                        </ol>                        
+                    </li><!-- end dropdown -->
+				</ul><!-- end header-nav -->
+                <!-- the button that belong to the navbar to make it appear in the phone screen -->
+				<a href="#" id="pull">menu</a>
+			</div>
+		</header>
+		<!-- end the header -->
+        <!-- start gamepage navigator -->
+        <div class="gamepage-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="games-single-post.html">game info</a></li>
+                    <li class="active"><a href="games-review-post.html">review</a></li>
+                    <li><a href="#">images</a></li>
+                    <li><a href="#">cheats & guides</a></li>
+                    <li><a href="#">forum</a></li>
+                    <li><a href="games-purchase-page.html">price & purchase</a></li>
+                    <li><a href="games-pc-req.html">pc requirements</a></li>
+                </ul>
+            </div>    
+        </div>
+        <!-- end gamepage navigator -->  
+        <!-- start the review -->
+        <section class="the-review">
+            <div class="container">
+                <div class="row">
+                    <div class="review-sidebar col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                        
+                        <div class="game-head">
+                            <div class="overlay"></div>
+                            <h4><span>the witcher 3:</span> wild hunt</h4>
+                        </div><!-- end game-head -->
+                        
+                        <div class="game-statics">
+                            <h5>gameplay<span>90%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                            </div>
+                            <h5>graphics<span>80%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                            </div>
+                            <h5>sounds<span>95%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;"></div>
+                            </div>                            
+                        </div><!-- end game-statics -->
+                        
+                        <div class="pros-cons">
+                            <h5>positive</h5>
+                            <ul class="pros">
+                                <li>stunning action sequences</li>
+                                <li>naunced emotional characters</li>
+                                <li>gorgeous world animation</li>
+                                <li>combat system is too great</li>
+                            </ul>
+                            <h5>negative</h5>
+                            <ul class="cons">
+                                <li>inconsistent cover system</li>
+                                <li>some glitches happen often</li>
+                            </ul>                            
+                        </div><!-- end pros-cons -->
+                        
+                        <div class="video">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/N4ony2r0QFs" class="embed-responsive-item" data-play="0" id="VdoID" frameborder="0" allowfullscreen></iframe>                            
+                        </div><!-- end video -->
+                        
+                        <div class="game-rate">
+                            <h3>rate: <span>9.6</span></h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum placerat placerat. Aliquam bibendum posuere eros cursus luctus. Phasellus pulvinar, ex ac vehicula auctor, erat diam.</p>
+                        </div><!-- end game0rate -->
+                        
+                        <div class="review-author">
+                            <h5><span>review</span> by</h5>
+                            <div class="image"><img src="images/blog/author.jpg" alt="image"></div>
+                            <span class="author-name">SOUL EATER</span>
+                        </div><!-- end review-author -->
+                        
+                    </div><!-- end review-sidebar -->
+                    
+                    <div class="review-content col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                        <div class="content">
+                            <h5><span>the fantasy</span> is nothing compared to the witcher world</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque bibendum placerat placerat. Aliquam bibendum posuere eros cursus luctus. Phasellus pulvinar, ex ac vehicula auctor, erat diam iaculis augue, rutrum bibendum libero metus eget dolor. In ultricies eu sem eget convallis. Etiam eu massa dui. Nulla finibus vitae sem nec tincidunt. Duis commodo nibh sed neque sollicitudin, sit amet suscipit felis elementum.Sed a ultricies justo. Maecenas tincidunt fringilla ullamcorper. Aliquam vel tempus ligula, eget luctus dui. Nunc at nunc consequat, ultrices erat vel, dictum lacus. Aliquam ut tellus ac magna ornare pulvinar. Duis rutrum maximus malesuada. Nulla non lectus scelerisque, tempus est eget, mattis magna.</p>
+                            <p>Morbi cursus dui elementum, maximus eros sit amet, luctus lectus. Sed eleifend nisi ligula. Vestibulum sagittis purus eget ipsum semper, vitae porttitor felis dictum. Morbi consectetur malesuada sem non blandit. Donec semper iaculis enim, nec faucibus mauris euismod eu. Sed dignissim nunc a magna efficitur, feugiat rhoncus odio lacinia.Etiam at magna tempus, viverra eros sed, mollis felis. Suspendisse at nulla nisi. Nunc ornare nec diam imperdiet tempus. Nam gravida nec velit id cursus. Morbi ac eros luctus, ullamcorper dolor eget, vestibulum risus. Donec pulvinar gravida placerat.</p>
+                            <h5><span>the combat system</span> is reliable</h5>
+                            <p>Proin ornare auctor ligula, sit amet egestas mauris aliquam id. Curabitur dignissim aliquam massa, eget vulputate eros sagittis vel. Curabitur porttitor gravida dapibus. Phasellus in mauris congue, pharetra lacus ac, dictum nunc. Donec at dolor posuere, rhoncus libero et, facilisis justo. Proin dictum faucibus condimentum. Proin dapibus quam eu diam placerat, rutrum faucibus massa pretium. Phasellus luctus lacinia ante, quis finibus dolor placerat a. Aenean elementum lacus vel lorem pharetra aliquet. Vivamus eu lobortis magna.</p>
+                            <blockquote class="blockquote">
+                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit.”</p>
+                            </blockquote>
+                            <p>Phasellus molestie malesuada suscipit. Suspendisse potenti. Quisque neque tellus, interdum nec tempus ut, scelerisque non leo. Morbi sed tincidunt ipsum. Cras consequat orci sodales, tempus erat iaculis, tempor dolor. Nunc laoreet sem non feugiat sagittis. Suspendisse sit amet diam in nunc aliquet eleifend at eget odio.</p>
+                            <p>Donec ut ipsum ultricies, sagittis nisi in, dapibus massa. Curabitur interdum odio vitae nibh convallis, ac bibendum nunc molestie. Praesent ipsum urna, fringilla non finibus id, posuere et nulla. Vestibulum in fringilla nulla. Donec lectus purus, blandit quis pulvinar ut, mattis vel augue. In feugiat mi felis, laoreet feugiat elit dignissim tincidunt. Quisque viverra nulla urna, hendrerit fermentum tellus finibus nec. Morbi vel pulvinar tortor, vitae sodales augue.</p>
+                            <h5><span>related</span> gallery</h5>
+                            <div class="related-gallery">
+                                <div class="image">
+                                    <a href="#"><img src="images/games/review-post-related-gallery1.jpg" alt="image"></a>
+                                </div>
+                                <div class="image">
+                                    <a href="#"><img src="images/games/review-post-related-gallery2.jpg" alt="image"></a>
+                                </div>
+                                <div class="image">
+                                    <a href="#"><img src="images/games/review-post-related-gallery3.jpg" alt="image"></a>
+                                </div>
+                            </div>
+                        </div> <!-- end content -->
+                    </div><!-- end review-content -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+        <!-- end the review -->
+        <!-- start comments section with a sidebar -->
+        <section class="review-cas">
+            <div class="container">
+                <div class="row">
+                    <div class="comments col-lg-9 col-md-8 col-sm-12 col-xs-12">
+                        <div class="comments-heading">
+                            <div class="overlay"></div>
+                            <div class="inner">
+                                <h4>share <span>your</span> opinion <i class="far fa-comments" aria-hidden="true"></i></h4>
+                                <p>sharing your opinion with others give us an advantage to make more interesting reviews so don't be shy feel free to comment.</p>                                
+                            </div>
+                        </div><!-- end cas-heading -->                        
+                        
+                        <ul class="comments-filter">
+                            <li class="active"><a href="#">default</a></li>
+                            <li><a href="#">latest</a></li>
+                            <li><a href="#">oldest</a></li>
+                        </ul>
+                        <!-- comments content -->
+                        <ul class="comments-content" id="comments-content">
+                            <!-- single comment content -->
+                            <li>
+                                <div class="comment">
+                                    <div class="comment-avatar">
+                                        <a href="#"><img src="images/blog/user-image2.jpg" alt="user image"></a>
+                                    </div>
+                                    <div class="comment-post">
+                                        <div class="comment-header">
+                                            <h5>CBR-Y8</h5>
+                                            <span>. 2 hours ago</span>
+                                        </div>
+                                        <div class="comment-body">
+                                            <p>leo scelerisque facilisis vitae sed augue. Phasellus id quam aliquam sapien fringilla malesuada. Praesent turpis odio, iaculis quis luctus vitae, aliquet id.</p>
+                                        </div>
+                                        <div class="comment-footer">
+                                            <ul>
+                                                <li><button type="button" class="like-btn mybtn">like <i class="far fa-heart"></i> <span>(5)</span></button></li>
+                                                <li>. <button type="button" class="reply-btn mybtn">replies <span>(2)</span></button></li>
+                                            </ul>
+                                        </div><!-- end comment-footer -->
+                                    </div><!-- end comment-post -->
+                                </div><!-- end comment -->
+                                <!-- reply comments -->
+                                <ul class="reply-comments">
+                                    <!-- signle reply comment -->
+                                    <li>
+                                        <div class="comment">
+                                            <div class="comment-avatar">
+                                                <a href="#"><img src="images/blog/user-image3.jpg" alt="user image"></a>
+                                            </div>
+                                            <div class="comment-post">
+                                                <div class="comment-header">
+                                                    <h5>Demo80</h5>
+                                                    <span>. 2 hours ago</span>
+                                                </div>
+                                                <div class="comment-body">
+                                                    <p>leo scelerisque facilisis vitae sed augue. Phasellus id quam aliquam sapien fringilla malesuada. Praesent turpis odio, iaculis quis luctus vitae, aliquet id.</p>
+                                                </div>                                                
+                                                <div class="comment-footer">
+                                                    <ul>
+                                                        <li><button type="button" class="like-btn mybtn">like <i class="far fa-heart"></i></button></li>
+                                                    </ul>
+                                                </div><!-- end comment-footer -->
+                                            </div><!-- end comment-post -->
+                                        </div><!-- end comment -->
+                                    </li><!-- end single reply comment -->
+                                    
+                                    <!-- signle reply comment -->
+                                    <li>
+                                        <div class="comment">
+                                            <div class="comment-avatar">
+                                                <a href="#"><img src="images/blog/author.jpg" alt="user image"></a>
+                                            </div>
+                                            <div class="comment-post">
+                                                <div class="comment-header">
+                                                    <h5>SOUL EATER</h5>
+                                                    <span class="user-type">admin</span>
+                                                    <span>. 53 min ago</span>
+                                                </div>
+                                                <div class="comment-body">
+                                                    <p>leo scelerisque facilisis vitae sed augue. Phasellus id quam aliquam sapien fringilla malesuada. Praesent turpis odio, iaculis quis luctus vitae, aliquet id.</p>
+                                                </div>
+                                                <div class="comment-footer">
+                                                    <ul>
+                                                        <li><button type="button" class="like-btn mybtn">like <i class="far fa-heart"></i></button></li>
+                                                    </ul>
+                                                </div><!-- end comment-footer -->
+                                            </div><!-- end comment-post -->
+                                        </div><!-- end comment -->
+                                    </li><!-- end single reply comment --> 
+                                    
+                                    <!-- reply form -->
+                                    <li class="reply-form">
+                                        <div class="form">
+                                            <div class="form-group">
+                                                <textarea class="myinput" rows="1" placeholder="Reply..."></textarea>
+                                                <button type="button" class="send-btn">send</button>                                                
+                                            </div>
+                                        </div><!-- end form -->
+                                    </li><!-- end reply-form -->
+                                    
+                                </ul><!-- end reply-comments -->
+                            </li><!-- end single commment content -->
+                            <!-- single comment content -->
+                            <li>
+                                <div class="comment">
+                                    <div class="comment-avatar">
+                                        <a href="#"><img src="images/blog/user-image4.jpg" alt="user image"></a>
+                                    </div>
+                                    <div class="comment-post">
+                                        <div class="comment-header">
+                                            <h5>Rocket2000</h5>
+                                            <span>. 2 min ago</span>
+                                        </div>
+                                        <div class="comment-body">
+                                            <p>leo scelerisque facilisis vitae sed augue. Phasellus id quam aliquam sapien fringilla malesuada. Praesent turpis odio, iaculis quis luctus vitae, aliquet id.</p>
+                                        </div>
+                                        <div class="comment-footer">
+                                            <ul>
+                                                <li><button type="button" class="like-btn mybtn">like <i class="far fa-heart"></i> <span>(1)</span></button></li>
+                                                <li>. <button type="button" class="reply-btn mybtn">replies <span>(0)</span></button></li>
+                                            </ul>
+                                        </div><!-- end comment-footer -->
+                                    </div><!-- end comment-post -->
+                                </div><!-- end comment -->
+                                
+                                <ul class="reply-comments">
+                                    <!-- reply form -->
+                                    <li class="reply-form">
+                                        <div class="form">
+                                            <div class="form-group">
+                                                <textarea class="myinput" rows="1" placeholder="Reply..."></textarea>
+                                                <button type="button" class="send-btn">send</button>                                                
+                                            </div>
+                                        </div><!-- end form -->
+                                    </li><!-- end reply-form -->
+                                </ul><!-- end reply-comments -->
+                                
+                            </li><!-- end single comment content -->
+                        </ul><!-- end comment content -->
+                        
+                        <div class="loadmore-btn mybtn">
+                            <a href="#comments-content"><i class="fa fa-circle-o-notch fa-spin"></i>load more 6 comments</a>
+                        </div>
+                        <!-- start leave a comment part -->
+                        <form>
+                            <h5><span>leave</span> a comment</h5>
+                            <div class="form-group">
+                                <textarea class="myinput" rows="5" placeholder="Your Comment.."></textarea>
+                            </div>
+                            <button type="submit" class="comment-btn mybtn">submit</button>
+                        </form>
+                        <!-- end leave a comment part -->
+                    </div><!-- end comments -->
+                    
+                    <div class="sidebar col-lg-3 col-md-4 col-sm-12 col-xs-12">
+                        <h4><span>more</span> reviews</h4>
+                        <!-- single sidebar post -->
+                        <div class="single-sp">
+                            <div class="image">
+                                <div class="overlay">
+                                    <h5>rate: 5.3</h5>
+                                </div>
+                                <a href="#"><img src="images/games/gamebox-image4.jpg" alt="image"></a>
+                            </div>
+                            <div class="info">
+                                <h5><a href="#"><span>left 4</span> dead: part 5</a></h5>
+                                <span class="date">20 may 2015, 10:35AM</span>
+                                <p>scelerisque facilisis vitae sed augue. Phasellus id quam aliquam sapien fringilla malesuada.</p>                                
+                            </div>
+                        </div><!-- end single-sp -->
+                        
+                        <!-- single sidebar post -->
+                        <div class="single-sp">
+                            <div class="image">
+                                <div class="overlay">
+                                    <h5>rate: 5.3</h5>
+                                </div>                                
+                                <a href="#"><img src="images/games/gamebox-image3.jpg" alt="image"></a>
+                            </div>
+                            <div class="info">
+                                <h5><a href="#"><span>fallout</span> 4</a></h5>
+                                <span class="date">20 may 2015, 10:35AM</span>
+                                <p>scelerisque facilisis vitae sed augue. Phasellus id quam aliquam sapien fringilla malesuada.</p>                                
+                            </div>
+                        </div><!-- end single-sp -->                        
+                        
+                        <!-- single sidebar post -->
+                        <div class="single-sp">
+                            <div class="image">
+                                <div class="overlay">
+                                    <h5>rate: 5.3</h5>
+                                </div>                                
+                                <a href="#"><img src="images/games/gamebox-image2.jpg" alt="image"></a>
+                            </div>
+                            <div class="info">
+                                <h5><a href="#"><span>devil may</span> cry 5</a></h5>
+                                <span class="date">20 may 2015, 10:35AM</span>
+                                <p>scelerisque facilisis vitae sed augue. Phasellus id quam aliquam sapien fringilla malesuada.</p>                                
+                            </div>
+                        </div><!-- end single-sp -->                         
+                        
+                    </div>
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+        <!-- end comments section with a sidebar -->         
+        
+        <!-- start footer -->
+        <footer class="footer">
+            <!-- the top of the footer -->
+            <div class="top-footer">
+                <div class="container">
+                    <div class="row">
+                        <ul class="social col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <li><h4><span>follow</span> us:</h4></li>
+                            <li data-toggle="tooltip" data-placement="bottom" title="Facebook">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li data-toggle="tooltip" data-placement="bottom" title="Twitter">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li data-toggle="tooltip" data-placement="bottom" title="YouTube">
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </li>
+                            <li data-toggle="tooltip" data-placement="bottom" title="Twitch">
+                                <a href="#"><i class="fab fa-twitch"></i></a>
+                            </li>                            
+                            <li data-toggle="tooltip" data-placement="bottom" title="RSS">
+                                <a href="#"><i class="fas fa-rss"></i></a>
+                            </li>                                                    
+                        </ul>
+                        <div class="aboutus col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <h4><span>about</span> us</h4>
+                            <p>Curabitur a orci et nulla gravida laoreet. Pellentesque dictum ipsum nec placerat dignissim. Vivamus porta pellentesque libeadro, sit amet non.</p>
+                        </div>
+                    </div><!-- end row -->
+                </div><!-- end container -->
+            </div><!-- end of top-footer -->
+            
+            <!-- the main part of the footer -->
+            <div class="mid-footer">
+                <div class="overlay1"></div>
+                <div class="overlay2"></div>
+                <div class="container">
+                    <div class="row">
+                        
+                        <!-- popular posts part -->
+                        <div class="pop-posts col-lg-3 col-md-3 col-sm-7 col-xs-12">
+                            <h4><span>popular</span> posts</h4>
+                            <ul>
+                                <li><a href="blog-page-single-post.html">deadpool 2 coming in summer of 2018.</a></li>
+                                <li><a href="blog-page-single-post.html">captain america civil war was a great movie !</a></li>
+                                <li><a href="blog-page-single-post.html">star wars battle front 2 the new DLC details.</a></li>
+                                <li><a href="newsroom-news-post.html">Fallout 76 Beta Duo In October</a></li>
+                                <li><a href="newsroom-news-post.html">Fortnite In-Game Purchases Pass $1 Billion Mark</a></li>
+                            </ul>
+                        </div>
+                        <!-- recent links part -->
+                        <div class="recent-links col-lg-3 col-md-3 col-sm-5 col-xs-12">
+                            <h4><span>visited</span> links</h4>
+                            <ul>
+                                <li><a href="newsroom-news-post.html">Wall-Penetrating Sniper Rifle Rumoured To Be Coming To Fortnite</a></li>
+                                <li><a href="newsroom-news-post.html">Microsoft Rumoured To Be Preparing Streaming-Only Version Of Next Console.</a></li>
+                                <li><a href="newsroom-news-post.html">Rainbow Six Siege Moves To Ban Players Who Use Hate Speech.</a></li>
+                                <li><a href="newsroom-news-post.html">Blizzard Removes Upfront Fee For New World Of Warcraft Players.</a></li>
+                            </ul>
+                        </div>
+                        <!-- subscribe to our newsletter -->
+                        <div class="newsletter col-lg-3 col-md-3 col-sm-7 col-xs-12">
+                            <h4><span>news</span>letter</h4>
+                            <p>we will send you the good news only</p>
+                            <form class="newsletter-form">
+                                <div class="form-group">
+                                    <input type="text" class="myinput" placeholder="Email">
+                                    <button type="submit" class="newsletter-btn"><i class="fas fa-sign-in-alt"></i></button>                                    
+                                </div>
+                            </form>
+                            <h4><span>info</span>rmation</h4>
+                            <p>Developers seeking publishing <br> Publishers seeking retail partners <br> Streamer partner programme Affiliate programme</p>
+                            <h4><span>we</span> also accept</h4>
+                            <ul>
+                                <li><i class="fab fa-cc-paypal"></i></li>
+                                <li><i class="fab fa-cc-visa"></i></li>
+                                <li><i class="fab fa-cc-mastercard"></i></li>
+                                <li><i class="fab fa-cc-discover"></i></li>
+                                <li><i class="fab fa-cc-jcb"></i></li>
+                            </ul>
+                        </div>
+                        <!-- recent gallery -->
+                        <div class="some-gallery col-lg-3 col-md-3 col-sm-5 col-xs-12">
+                            <h4><span>our</span> gallery</h4>
+                            <div class="image">
+                                <a href="#"><img src="images/home/footer-image1.jpg" alt="image"></a>
+                            </div>
+                            <div class="image">
+                                <a href="#"><img src="images/home/footer-image2.jpg" alt="image"></a>
+                            </div>
+                            <div class="image">
+                                <a href="#"><img src="images/home/footer-image3.jpg" alt="image"></a>
+                            </div>
+                            <div class="image">
+                                <a href="#"><img src="images/home/footer-image4.jpg" alt="image"></a>
+                            </div>
+                            <p>we have such an amazing and astonishing wallpapers and images</p> 
+                            <p>check it <a href="gallery.html">now</a></p>
+                        </div>
+                        
+                    </div><!-- end row -->
+                </div><!-- end container -->
+            </div><!-- end mid-footer -->
+            
+            <div class="bot-footer">
+                <div class="container">
+                    <div class="copyright">
+                        <p>copyright 2017 &copy;. the hawk game store template </p>
+                    </div>
+                    <div class="madeby">
+                        <p>made by <span>DeadlyCoder</span></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end footer -->  
+        
+        <!-- the Javascript files -->
+        <script src="js/jquery-1.12.3.min.js"></script> <!-- the java script plugin that required to use jquery syntax -->
+        <script src="js/bootstrap.min.js"></script> <!-- the bootstrap java script minified file the required to use the bootstrap -->		
+        <script src="js/global-script.js"></script>
+    </body>
+</html>    
